@@ -858,17 +858,18 @@
 
               </div>
               <div class="col-md-9 content-right">
-                <form>
+                <form action="https://getsimpleform.com/messages?form_api_token=485410a17b266533e1874d146c05c675" method="post">
+                  <input type='hidden' name='redirect_to' value='http://bradleyrgriffin.github.io/contact/contact-form-thank-you.html' />
                   <div class="group">
-                    <input required="" type="text"><span class="highlight"></span><span class="bar"></span><label>Name</label>
+                    <input required="" type="text" name = "name"><span class="highlight"></span><span class="bar"></span><label>Name</label>
                   </div>
                   <div class="group">
-                    <input required="" type="email"><span class="highlight"></span><span class="bar"></span><label>Email</label>
+                    <input required="" type="email" name ="email"><span class="highlight"></span><span class="bar"></span><label>Email</label>
                   </div>
                   <div class="group">
-                    <textarea required=""></textarea><span class="highlight"></span><span class="bar"></span><label>Message</label>
+                    <textarea required="" name = "message"></textarea><span class="highlight"></span><span class="bar"></span><label>Message</label>
                   </div>
-                  <input id="sendMessage" name="sendMessage" type="submit" value="Send Message">
+                  <input id = "sendMessage" name="sendMessage" type="submit" value="Send Message">
                 </form>
               </div>
             </div>
@@ -906,7 +907,6 @@
       </div>
     <!--/.CONTENT-WRAP END-->
     </div>
-
 
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/jquery.appear.js" type="text/javascript"></script>
