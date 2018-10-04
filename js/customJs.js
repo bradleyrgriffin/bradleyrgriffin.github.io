@@ -186,7 +186,7 @@ function main(){
             }
       }
 
-      $("#min-values").html('<h4><b>Best Fitness Score:</b></h4><p><b>Type: </b>' + minGenFitnessMutateType + '<br><b>Fitness Score: </b>' + minGenFitness + '</p>');
+      $("#min-values").html('<h4><b>Best Fitness Score:</b></h4><p><b>Type: </b>' + (minGenFitnessMutateType == null ? '' : minGenFitnessMutateType) + '<br><b>Fitness Score: </b>' + (minGenFitness == null ? '' : minGenFitness) + '</p>');
 
       drawMyChart(chartArray);
       drawMyChart2(lastGenFitnessForChart);
