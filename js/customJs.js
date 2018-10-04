@@ -230,7 +230,7 @@ function drawMyChart2(chartdata){
       }
 
 }
-function drawMyChart2(chartdata){
+function drawMyChart3(chartdata){
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
