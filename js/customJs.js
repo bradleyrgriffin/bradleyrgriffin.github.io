@@ -45,6 +45,8 @@ function resetEverything(){
       $("#popSize").val('30');
       $("#mutatePercentage").val('.69');
       $("#min-values").html('Reset');
+      minGenFitness = null;
+      minGenFitnessMutateType = null;
 
 
 
