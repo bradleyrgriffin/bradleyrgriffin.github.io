@@ -27,6 +27,10 @@ var TotalClicks = 0;
 var lastGenFitnessForChart = [];
 var numAttempts = 0;
 
+//Informational Vars
+var minGenFitness;
+var minGenFitnessMutateType;
+
 //Clicked after page has loaded and another run of the script happens. Will update constants to new values if needed.
 function changeValues(){
       MAX_NUM_POPULATION_MEMBERS = $('#popSize').find(":selected").val();
@@ -173,8 +177,20 @@ function main(){
       //Turns to CSV download.
       toExcel(csvForExcel);
 
+      for(var k = 1; k < lastGenFitnessForChart.length; k++){
+            minGenFitness = lastGenFitnessForChart[0][1];
+            if(minGenFitness > lastGenFitnessForChart[k][1]){
+                  minGenFitness = lastGenFitnessForChart[k][1];
+                  minGenFitnessMutateType = $('#mutatePercentage').find(":selected").text();
+            }
+      }
+      
+      $("#min-values").html('<h4><b>Best Fitness Score:</b></h4><p><b>Type: </b>' + minGenFitnessMutateType + '<br><b>Fitness Score: </b>' + minGenFitness + '</p>');
+
       drawMyChart(chartArray);
       drawMyChart2(lastGenFitnessForChart);
+
+
 
 
 }
