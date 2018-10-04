@@ -31,10 +31,22 @@ var numAttempts = 0;
 function changeValues(){
       MAX_NUM_POPULATION_MEMBERS = $('#popSize').find(":selected").val();
       MUTATE_PERCENTAGE = $('#mutatePercentage').find(":selected").val();
-      KNAPSACK_SIZE = (MIN * MIN * MIN) * MAX_NUM_POPULATION_MEMBERS
+      KNAPSACK_SIZE = (MIN * MIN * MIN) * MAX_NUM_POPULATION_MEMBERS;
       main();
 }
 
+function resetEverything(){
+      numAttempts = 0;
+      lastGenFitnessForChart = [];
+      $("#popSize").val('30');
+      $("#mutatePercentage").val('.69');
+
+      MUTATE_PERCENTAGE = .69;
+      MAX_NUM_POPULATION_MEMBERS = 30;
+      KNAPSACK_SIZE = (MIN * MIN * MIN) * MAX_NUM_POPULATION_MEMBERS;
+
+      main();
+}
 
 
 $(function() {
@@ -50,11 +62,7 @@ $(function() {
 
             if (e.keyCode == 0 || e.keyCode == 32){
                   e.preventDefault();
-                  numAttempts = 0;
-                  lastGenFitnessForChart = [];
-                  $("#popSize").val('30');
-                  $("#mutatePercentage").val('.69');
-                  changeValues();
+                  resetEverything();
             }
 
       });
