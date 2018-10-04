@@ -42,13 +42,14 @@ $(function() {
       $('#bdy').keypress(function(e){
             if(e.keyCode == 13){
                   changeValues();
-            }else if (e.key === ' ' || e.key === 'Spacebar') {
-    // ' ' is standard, 'Spacebar' was used by IE9 and Firefox < 37
-    e.preventDefault()
-    numAttempts = 0;
-    lastGenFitnessForChart = [];
-    changeValues();
-  }
+            }
+
+            if (e.keyCode == 0 || e.keyCode == 32){
+                  numAttempts = 0;
+                  lastGenFitnessForChart = [];
+                  changeValues();
+            }
+
       });
 
 
