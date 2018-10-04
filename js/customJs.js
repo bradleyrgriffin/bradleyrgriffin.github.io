@@ -88,8 +88,6 @@ function main(){
 
       var initPop = createInitialPopulation();
       var chartArray = [];
-      var wastedSpaceArray = [];
-      wastedSpaceArray.push(['Generation', 'Wasted Space']);
       chartArray.push(['Generation', 'Fitness']);
 
 
@@ -155,8 +153,6 @@ function main(){
                         "</li></ul></div>";
 
             csvForExcel += g + "," + sumGenFitness + "," + sumtotVol + "," + numCubes + "," + numPyramids + "," + numInSack + "," + knapsackFilled + "<br>";
-
-            wastedSpaceArray.push([('\'' + g + '\''),knapsackFilled]);
             chartArray.push([('\'' + g + '\''),sumGenFitness]);
             bdyText += "</ul>";
 
@@ -186,7 +182,6 @@ function main(){
 
       drawMyChart(chartArray);
       drawMyChart2(lastGenFitnessForChart);
-      drawMyChart3(wastedSpaceArray);
 
 
 
@@ -225,24 +220,6 @@ function drawMyChart2(chartdata){
             };
 
             var chart = new google.visualization.LineChart(document.getElementById('chart2'));
-
-            chart.draw(data, options);
-      }
-
-}
-function drawMyChart3(chartdata){
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart(data) {
-            var data = google.visualization.arrayToDataTable(chartdata);
-            var options = {
-              title: 'Wasted Space Over Generation',
-              curveType: 'function',
-              backgroundColor: '#f2f2f2'
-            };
-
-            var chart = new google.visualization.LineChart(document.getElementById('chart3'));
 
             chart.draw(data, options);
       }
