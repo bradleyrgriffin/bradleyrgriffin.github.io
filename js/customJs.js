@@ -42,7 +42,7 @@ $(function() {
       $('#bdy').keypress(function(e){
             if(e.keyCode == 13){
                   changeValues();
-            }else if(e.keyCode == 8){
+            }else if(e.keyCode == 16 && e.keyCode ==13){
                   numAttempts = 0;
                   lastGenFitnessForChart = [];
                   changeValues();
