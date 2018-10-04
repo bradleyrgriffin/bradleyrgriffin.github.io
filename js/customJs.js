@@ -397,11 +397,11 @@ function rotationalDifference(rotationObj){
                   break;
 
             case 2:
-                  retVal = 2;
+                  retVal = .9;
                   break;
 
             case 3:
-                  retVal = 1;
+                  retVal = .1;
                   break;
       }
 
