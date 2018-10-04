@@ -183,9 +183,8 @@ function main(){
       toExcel(csvForExcel);
 
       for(var k = 2; k < lastGenFitnessForChart.length; k++){
-            minGenFitness = lastGenFitnessForChart[1][1];
-            if(minGenFitness > lastGenFitnessForChart[k][1]){
-                  minGenFitness = lastGenFitnessForChart[k][1];
+            if(minGenFitness > sumGenFitness){
+                  minGenFitness = sumGenFitness;
                   minGenFitnessMutateType = $('#mutatePercentage').find(":selected").text();
             }
       }
