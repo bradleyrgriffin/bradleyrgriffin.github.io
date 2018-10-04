@@ -24,6 +24,8 @@ var maxRot = 4;
 var numGenerations;
 var numPopMembers;
 var TotalClicks = 0;
+var lastGenFitnessForChart = [];
+var numAttempts = 0;
 
 //Clicked after page has loaded and another run of the script happens. Will update constants to new values if needed.
 function changeValues(){
@@ -34,14 +36,32 @@ function changeValues(){
 }
 
 
+
+$(function() {
+
+      $('#bdy').keypress(function(e){
+            if(e.keyCode == 13){
+                  changeValues();
+            }
+      });
+
+
+});
+
 function main(){
       numGenerations = 0;
       numPopMembers = 0;
       TotalClicks = 0;
+      numAttempts++;
+
+      if(lastGenFitnessForChart.length == 0){
+            lastGenFitnessForChart.push(['Attempt', 'Final Fitness']);
+      }
 
       var initPop = createInitialPopulation();
       var chartArray = [];
       chartArray.push(['Generation', 'Fitness']);
+
 
       var nextGenPop = [];
 
@@ -84,6 +104,8 @@ function main(){
                   }
             }
 
+
+
             for (var z = 0; z < nextGenPop.length; z++){
                   if((nextGenPop[z].volume + nextGenPop[z].wastedSpace) < knapsackFilled){
                         knapsackFilled = knapsackFilled - (nextGenPop[z].volume + nextGenPop[z].wastedSpace);
@@ -102,6 +124,7 @@ function main(){
                         "</li></ul></div>";
 
             csvForExcel += g + "," + sumGenFitness + "," + sumtotVol + "," + numCubes + "," + numPyramids + "," + numInSack + "," + knapsackFilled + "<br>";
+
             chartArray.push([('\'' + g + '\''),sumGenFitness]);
             bdyText += "</ul>";
 
@@ -112,6 +135,8 @@ function main(){
             }
 
       }
+
+      lastGenFitnessForChart.push([('\'' + numAttempts + '\''), chartArray[(chartArray.length-1)][1]]);
       //Appends Total Number of Generations
       $("#num-clicks").html('<h4>Total Number of Generations: <b><u>' + TotalClicks + '</u></b><h4>');
 
@@ -127,6 +152,8 @@ function main(){
       toExcel(csvForExcel);
 
       drawMyChart(chartArray);
+      drawMyChart2(lastGenFitnessForChart);
+
 
 }
 
@@ -135,20 +162,38 @@ function drawMyChart(chartdata){
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart(data) {
-        var data = google.visualization.arrayToDataTable(chartdata);
-        var options = {
-          title: 'Algorithm Performance',
-          curveType: 'function',
-          backgroundColor: '#f2f2f2'
-        };
+            var data = google.visualization.arrayToDataTable(chartdata);
+            var options = {
+              title: 'Algorithm Performance',
+              curveType: 'function',
+              backgroundColor: '#f2f2f2'
+            };
 
-        var chart = new google.visualization.LineChart(document.getElementById('chart'));
+            var chart = new google.visualization.LineChart(document.getElementById('chart'));
 
-        chart.draw(data, options);
+            chart.draw(data, options);
       }
 
 }
 
+function drawMyChart2(chartdata){
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart(data) {
+            var data = google.visualization.arrayToDataTable(chartdata);
+            var options = {
+              title: 'Final Fitness Over Time',
+              curveType: 'function',
+              backgroundColor: '#f2f2f2'
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart2'));
+
+            chart.draw(data, options);
+      }
+
+}
 
 function nextGen(initPop){
 
