@@ -44,7 +44,9 @@ function resetEverything(){
       lastGenFitnessForChart = [];
       $("#popSize").val('30');
       $("#mutatePercentage").val('.69');
-      $("#min-values").html('');
+      $("#min-values").html('Reset');
+
+
 
       MUTATE_PERCENTAGE = .69;
       MAX_NUM_POPULATION_MEMBERS = 30;
