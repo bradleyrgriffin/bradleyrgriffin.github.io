@@ -28,8 +28,8 @@ var lastGenFitnessForChart = [];
 var numAttempts = 0;
 
 //Informational Vars
-var minGenFitness;
-var minGenFitnessMutateType;
+var minGenFitness = "";
+var minGenFitnessMutateType = "";
 
 //Clicked after page has loaded and another run of the script happens. Will update constants to new values if needed.
 function changeValues(){
@@ -44,6 +44,7 @@ function resetEverything(){
       lastGenFitnessForChart = [];
       $("#popSize").val('30');
       $("#mutatePercentage").val('.69');
+      $("#min-values").html('<h4><b>Best Fitness Score:</b></h4><p><b>Type: </b><br><b>Fitness Score: </b></p>');
 
       MUTATE_PERCENTAGE = .69;
       MAX_NUM_POPULATION_MEMBERS = 30;
