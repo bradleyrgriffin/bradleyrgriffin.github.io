@@ -28,8 +28,8 @@ var lastGenFitnessForChart = [];
 var numAttempts = 0;
 
 //Informational Vars
-var minGenFitness = "";
-var minGenFitnessMutateType = "";
+var minGenFitness;
+var minGenFitnessMutateType;
 
 //Clicked after page has loaded and another run of the script happens. Will update constants to new values if needed.
 function changeValues(){
