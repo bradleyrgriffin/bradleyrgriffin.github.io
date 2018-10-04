@@ -378,7 +378,7 @@ function fitnessfunction(a){
 }
 
 function rotationalDifference(rotationObj){
-      var retVal = getRandomInt(1,4);
+      var retVal = getRandomInt(1,3);
       var wastedSpace = 0;
       switch (retVal){
             case 1:
@@ -391,10 +391,6 @@ function rotationalDifference(rotationObj){
 
             case 3:
                   retVal = 1;
-                  break;
-
-            case 4:
-                  retVal = 100;
                   break;
       }
 
