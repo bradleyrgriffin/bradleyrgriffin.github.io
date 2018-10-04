@@ -39,14 +39,21 @@ function changeValues(){
 
 $(function() {
 
+      $("#popSize").val('30');
+      $("#mutatePercentage").val('.69');
+
       $('#bdy').keypress(function(e){
             if(e.keyCode == 13){
+                  e.preventDefault();
                   changeValues();
             }
 
             if (e.keyCode == 0 || e.keyCode == 32){
+                  e.preventDefault();
                   numAttempts = 0;
                   lastGenFitnessForChart = [];
+                  $("#popSize").val('30');
+                  $("#mutatePercentage").val('.69');
                   changeValues();
             }
 
