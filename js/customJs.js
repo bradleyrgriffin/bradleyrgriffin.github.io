@@ -44,9 +44,7 @@ function resetEverything(){
       lastGenFitnessForChart = [];
       $("#popSize").val('30');
       $("#mutatePercentage").val('.69');
-      $("#min-values").html('Reset');
-      minGenFitness = null;
-      minGenFitnessMutateType = null;
+
 
 
 
@@ -181,15 +179,6 @@ function main(){
       csvForExcel = "Generation" + "," + "Generation Fitness Level" + "," + "Generation Total Volume" + "," + "Number of Cubes" + "," + "Number of Pyramids" + "," + "Number of Shapes in Knapsack" + "," + "Volume Wasted in Knapsack" + "\n" + csvForExcel;
       //Turns to CSV download.
       toExcel(csvForExcel);
-
-      for(var k = 2; k < lastGenFitnessForChart.length; k++){
-            if(minGenFitness > sumGenFitness){
-                  minGenFitness = sumGenFitness;
-                  minGenFitnessMutateType = $('#mutatePercentage').find(":selected").text();
-            }
-      }
-
-      $("#min-values").html('<h4><b>Best Fitness Score:</b></h4><p><b>Type: </b>' + (minGenFitnessMutateType == null ? '' : minGenFitnessMutateType) + '<br><b>Fitness Score: </b>' + (minGenFitness == null ? '' : minGenFitness) + '</p>');
 
       drawMyChart(chartArray);
       drawMyChart2(lastGenFitnessForChart);
