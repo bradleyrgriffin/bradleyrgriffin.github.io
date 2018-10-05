@@ -9,7 +9,7 @@ This JS creates and utilizes a genetic algorithm centered around the Knapsack pr
 //========================
 //Adjust these below Constants to alter the code. I will probably turn these into selection boxes later on.
 //=========================
-var MAX_NUM_GENERATIONS = 10000;
+var MAX_NUM_GENERATIONS = 500;
 var MAX_NUM_POPULATION_MEMBERS = 30;
 
 var MUTATE_PERCENTAGE = .69; //Better off to leave this as is, changing it even a small amount drastically affects the algorithm
@@ -33,6 +33,7 @@ var minGenFitnessMutateType;
 
 //Clicked after page has loaded and another run of the script happens. Will update constants to new values if needed.
 function changeValues(){
+      MAX_NUM_GENERATIONS = $('#maxGenerations').find(":selected").val();
       MAX_NUM_POPULATION_MEMBERS = $('#popSize').find(":selected").val();
       MUTATE_PERCENTAGE = $('#mutatePercentage').find(":selected").val();
       KNAPSACK_SIZE = (MIN * MIN * MIN) * MAX_NUM_POPULATION_MEMBERS;
@@ -44,10 +45,11 @@ function resetEverything(){
       lastGenFitnessForChart = [];
       $("#popSize").val('30');
       $("#mutatePercentage").val('.69');
+       $('#maxGenerations').val('500');
 
 
 
-
+      MAX_NUM_GENERATIONS = 500;
       MUTATE_PERCENTAGE = .69;
       MAX_NUM_POPULATION_MEMBERS = 30;
       KNAPSACK_SIZE = (MIN * MIN * MIN) * MAX_NUM_POPULATION_MEMBERS;
