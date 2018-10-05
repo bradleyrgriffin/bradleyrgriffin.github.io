@@ -12,7 +12,7 @@ This JS creates and utilizes a genetic algorithm centered around the Knapsack pr
 var MAX_NUM_GENERATIONS = 500;
 var MAX_NUM_POPULATION_MEMBERS = 30;
 
-var MUTATE_PERCENTAGE = .69; //Better off to leave this as is, changing it even a small amount drastically affects the algorithm
+var MUTATE_PERCENTAGE = .50; //Better off to leave this as is, changing it even a small amount drastically affects the algorithm
 var MIN = 1;
 var MAX = 100;
 var KNAPSACK_SIZE = (MIN * MIN * MIN) * MAX_NUM_POPULATION_MEMBERS; //Volume in the Knapsack, To keep everything within normal realms, keep this at a minimum, 3 times the size of MAX
@@ -40,13 +40,13 @@ function resetEverything(){
       numAttempts = 0;
       lastGenFitnessForChart = [];
       $("#popSize").val('30');
-      $("#mutatePercentage").val('.69');
+      $("#mutatePercentage").val('.50');
       $('#maxgenerations').val('500');
 
 
 
       MAX_NUM_GENERATIONS = 500;
-      MUTATE_PERCENTAGE = .69;
+      MUTATE_PERCENTAGE = .50;
       MAX_NUM_POPULATION_MEMBERS = 30;
       KNAPSACK_SIZE = (MIN * MIN * MIN) * MAX_NUM_POPULATION_MEMBERS;
 
@@ -57,7 +57,7 @@ function resetEverything(){
 $(function() {
 
       $("#popSize").val('30');
-      $("#mutatePercentage").val('.69');
+      $("#mutatePercentage").val('.50');
       $('#maxgenerations').val('500');
 
 
