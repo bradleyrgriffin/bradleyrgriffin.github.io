@@ -7,10 +7,11 @@
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
             <script>
                   function main(){
-                        if($('#name').text == "Amanda"){
+                        var name = $("#txt_name").val();
+                        if( name == "Amanda"){
                               alert("I love you Amanda!");
                         }else{
-                              alert("you're not Amanda...");
+                              alert("you're " + name);
                         }
 
                   }
@@ -23,7 +24,7 @@
                         </div>
                         <div class="col-sm-6">
                               <label for="name">Please Enter your First Name</label>
-                              <input id="name"></input>
+                              <input type="text" id="txt_name"></input>
                               <button onclick="main()">Submit</button>
                         </div>
                         <div class="col-sm-3"></div>
