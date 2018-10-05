@@ -13,7 +13,7 @@ var MAX_NUM_GENERATIONS = 500;
 var MAX_NUM_POPULATION_MEMBERS = 30;
 
 var MUTATE_PERCENTAGE = .50; //Better off to leave this as is, changing it even a small amount drastically affects the algorithm
-var MIN = 1;
+var MIN = 2;
 var MAX = 20;
 var KNAPSACK_SIZE = (MIN * MIN * MIN) * MAX_NUM_POPULATION_MEMBERS; //Volume in the Knapsack, To keep everything within normal realms, keep this at a minimum, 3 times the size of MAX
 var minRot = 1;
@@ -26,6 +26,7 @@ var numPopMembers;
 var TotalClicks = 0;
 var lastGenFitnessForChart = [];
 var numAttempts = 0;
+var csvForExcelAllData = "Generation" + "," + "Generation Fitness Level" + "," + "Generation Total Volume" + "," + "Number of Cubes" + "," + "Number of Pyramids" + "," + "Number of Shapes in Knapsack" + "," + "Volume Wasted in Knapsack" + "\n";
 
 //Clicked after page has loaded and another run of the script happens. Will update constants to new values if needed.
 function changeValues(){
@@ -42,6 +43,7 @@ function resetEverything(){
       $("#popSize").val('30');
       $("#mutatePercentage").val('.50');
       $('#maxgenerations').val('500');
+      csvForExcelAllData = "";
 
 
 
@@ -95,7 +97,7 @@ function main(){
       var nextGenPop = [];
 
       //Stores the CSV data
-      var csvForExcel = "";
+      //var csvForExcel = "";
 
       //More Efficient than individual pushing
       var appendAllAtOnce = "";
@@ -153,7 +155,9 @@ function main(){
                         "</li><li>Volume left in Knapsack: " + knapsackFilled +
                         "</li></ul></div>";
 
-            csvForExcel += g + "," + sumGenFitness + "," + sumtotVol + "," + numCubes + "," + numPyramids + "," + numInSack + "," + knapsackFilled + "<br>";
+            //csvForExcel += g + "," + sumGenFitness + "," + sumtotVol + "," + numCubes + "," + numPyramids + "," + numInSack + "," + knapsackFilled + "<br>";
+
+            csvForExcelAllData += g + "," + sumGenFitness + "," + sumtotVol + "," + numCubes + "," + numPyramids + "," + numInSack + "," + knapsackFilled + "\n";
             chartArray.push([('\'' + g + '\''),sumGenFitness]);
             bdyText += "</ul>";
 
@@ -166,6 +170,7 @@ function main(){
       }
 
       lastGenFitnessForChart.push([('\'' + numAttempts + '\''), chartArray[(chartArray.length-1)][1]]);
+
       //Appends Total Number of Generations
       $("#num-clicks").html('<h4>Total Number of Generations: <b><u>' + TotalClicks + '</u></b><h4>');
 
@@ -175,10 +180,13 @@ function main(){
 
       //Turns HTML newline into Excel recognizable newline.
 
-      csvForExcel = replaceAll(csvForExcel, "<br>", "\n");
-      csvForExcel = "Generation" + "," + "Generation Fitness Level" + "," + "Generation Total Volume" + "," + "Number of Cubes" + "," + "Number of Pyramids" + "," + "Number of Shapes in Knapsack" + "," + "Volume Wasted in Knapsack" + "\n" + csvForExcel;
+      //csvForExcel = replaceAll(csvForExcel, "<br>", "\n");
+      //csvForExcel = "Generation" + "," + "Generation Fitness Level" + "," + "Generation Total Volume" + "," + "Number of Cubes" + "," + "Number of Pyramids" + "," + "Number of Shapes in Knapsack" + "," + "Volume Wasted in Knapsack" + "\n" + csvForExcel;
+
+      // csvForExcelAllData = "Generation" + "," + "Generation Fitness Level" + "," + "Generation Total Volume" + "," + "Number of Cubes" + "," + "Number of Pyramids" + "," + "Number of Shapes in Knapsack" + "," + "Volume Wasted in Knapsack" + "\n" + csvForExcel;
       //Turns to CSV download.
-      toExcel(csvForExcel);
+      toExcel(csvForExcelAllData);
+      //toExcelAllData(csvForExcelAllData);
 
       drawMyChart(chartArray);
       drawMyChart2(lastGenFitnessForChart);
@@ -499,5 +507,24 @@ function toExcel(data){
       a.dataset.downloadurl = [contentType, a.download, a.href].join(':');
 
       $("#download-link").html(document.body.appendChild(a));
+}
+
+function toExcelAllData(data){
+      var CSV = data;
+
+      window.URL = window.webkitURL || window.URL;
+
+      var contentType = 'text/csv';
+
+      var csvFile = new Blob([CSV], {type: contentType});
+
+      var a = document.createElement('a');
+      a.download = 'my.csv';
+      a.href = window.URL.createObjectURL(csvFile);
+      a.textContent = 'Download All Attempts Information';
+
+      a.dataset.downloadurl = [contentType, a.download, a.href].join(':');
+
+      $("#download-link2").html(document.body.appendChild(a));
 }
 //===================================================================
