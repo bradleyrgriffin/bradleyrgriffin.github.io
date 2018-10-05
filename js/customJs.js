@@ -29,7 +29,7 @@ var numAttempts = 0;
 
 //Clicked after page has loaded and another run of the script happens. Will update constants to new values if needed.
 function changeValues(){
-      MAX_NUM_GENERATIONS = $('#maxGenerations').find(":selected").val();
+      MAX_NUM_GENERATIONS = $('#maxgenerations').find(":selected").val();
       MAX_NUM_POPULATION_MEMBERS = $('#popSize').find(":selected").val();
       MUTATE_PERCENTAGE = $('#mutatePercentage').find(":selected").val();
       KNAPSACK_SIZE = (MIN * MIN * MIN) * MAX_NUM_POPULATION_MEMBERS;
@@ -41,7 +41,7 @@ function resetEverything(){
       lastGenFitnessForChart = [];
       $("#popSize").val('30');
       $("#mutatePercentage").val('.69');
-      $('#maxGenerations').val('500');
+      $('#maxgenerations').val('500');
 
 
 
