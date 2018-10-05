@@ -14,7 +14,7 @@ var MAX_NUM_POPULATION_MEMBERS = 30;
 
 var MUTATE_PERCENTAGE = .50; //Better off to leave this as is, changing it even a small amount drastically affects the algorithm
 var MIN = 1;
-var MAX = 100;
+var MAX = 20;
 var KNAPSACK_SIZE = (MIN * MIN * MIN) * MAX_NUM_POPULATION_MEMBERS; //Volume in the Knapsack, To keep everything within normal realms, keep this at a minimum, 3 times the size of MAX
 var minRot = 1;
 var maxRot = 4;
