@@ -27,10 +27,6 @@ var TotalClicks = 0;
 var lastGenFitnessForChart = [];
 var numAttempts = 0;
 
-//Informational Vars
-var minGenFitness;
-var minGenFitnessMutateType;
-
 //Clicked after page has loaded and another run of the script happens. Will update constants to new values if needed.
 function changeValues(){
       MAX_NUM_GENERATIONS = $('#maxGenerations').find(":selected").val();
@@ -45,7 +41,7 @@ function resetEverything(){
       lastGenFitnessForChart = [];
       $("#popSize").val('30');
       $("#mutatePercentage").val('.69');
-       $('#maxGenerations').val('500');
+      $('#maxGenerations').val('500');
 
 
 
@@ -62,6 +58,8 @@ $(function() {
 
       $("#popSize").val('30');
       $("#mutatePercentage").val('.69');
+      $('#maxgenerations').val('500');
+
 
       $('#bdy').keypress(function(e){
             if(e.keyCode == 13){
