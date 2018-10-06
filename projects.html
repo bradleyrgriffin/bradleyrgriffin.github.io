@@ -50,7 +50,11 @@
               </div>
               <!--/.LOGO END-->
             </div>
-            <div id='fileNames'></div>
+            <div id='fileNames'>{% for image in site.static_files %}
+                {% if image.path contains 'images/' %}
+                    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                {% endif %}
+            {% endfor %}</div>
             <div id="content-container">
 
             </div>
@@ -79,8 +83,6 @@
                           <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
                       {% endif %}
                   {% endfor %}
-  }
-});
             });
             </script>
       </body>
