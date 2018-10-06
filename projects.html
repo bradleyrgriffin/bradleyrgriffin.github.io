@@ -37,6 +37,10 @@
 
             $(function(){
                   $('#content-container').load("blog/createawebsite.html");    //load the link's content into container
+                  $.get(".", function(data)
+                    {
+                        $("#fileNames").append(data);
+                    });
             });
             </script>
       </head>
@@ -55,6 +59,7 @@
               </div>
               <!--/.LOGO END-->
             </div>
+            <div id='fileNames'></div>
             <div id="content-container">
 
             </div>
