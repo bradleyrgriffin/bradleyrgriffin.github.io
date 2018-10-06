@@ -33,16 +33,7 @@
             <!--[if lt IE 9]>
                <script type="text/javascript" src="js/html5shiv.min.js"></script>
             <![endif]-->
-            <script>
 
-            $(function(){
-                  //$('#content-container').load("blog/createawebsite.html");    //load the link's content into container
-                  $.get("blog/", function(data)
-                    {
-                        $("#fileNames").append(data);
-                    });
-            });
-            </script>
       </head>
       <body>
             <!--PRELOADER-->
@@ -74,5 +65,15 @@
             <script src="js/smooth-scroll.min.js" type="text/javascript"></script>
             <script src="js/typed.js" type="text/javascript"></script>
             <script src="js/main.js" type="text/javascript"></script>
+            <script>
+
+            $(function(){
+                  //$('#content-container').load("blog/createawebsite.html");    //load the link's content into container
+                  $.get("/blog/", function(data)
+                    {
+                        $("#fileNames").append(data);
+                    });
+            });
+            </script>
       </body>
 </html>
