@@ -3,7 +3,7 @@
 $(function(){
       var linkContent = "<meta charset=\"utf-8\"><title>Brad Griffin, Professional</title><meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"><meta content=\"width=device-width, initial-scale=1\" name=\"viewport\"><meta content=\"Brad Griffin, Technology Professional Portfolio\" name=\"description\"><meta content=\"Brad Griffin\" name=\"author\"><meta name=\"keywords\" content = \"technology, professional, student, college, intern, professionals, thomas, thomas college\"><link href=\"images/logo.png\" rel=\"shortcut icon\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"><link href=\"https://fonts.googleapis.com/css?family=Roboto+Slab:400,700\" rel=\"stylesheet\" type=\"text/css\"><link href=\"https://fonts.googleapis.com/css?family=Roboto:400,300,500,700\" rel=\"stylesheet\" type=\"text/css\"><link href=\"css/bootstrap.min.css\" rel=\"stylesheet\"><link href=\"css/owl.carousel.css\" rel=\"stylesheet\"><link href=\"css/bootstrap.min.css\" rel=\"stylesheet\"><link href=\"css/owl.carousel.css\" rel=\"stylesheet\"><link href=\"css/owl.theme.css\" rel=\"stylesheet\"><link href=\"css/magnific-popup.css\" rel=\"stylesheet\"><link href=\"css/style.css\" rel=\"stylesheet\"><link href=\"css/responsive.css\" rel=\"stylesheet\"><script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>";
 
-      document.getElementById("linkContent").html = linkContent;
+      document.getElementById("linkContent").innerHTML = linkContent;
 
 
       // $("#linkContent").html(linkContent);
