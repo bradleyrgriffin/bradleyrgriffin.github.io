@@ -19,6 +19,10 @@ $(function(){
 
 });
 
+function loadTemplate(){
+      $('#content-container').load("blog/mainpage.html");
+}
+
 function showMenu(){
       $("#body").attr("class", "show-menu");
 }
