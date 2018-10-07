@@ -12,7 +12,7 @@ $(function(){
             $("#innerJavascript").html(innerJavascript);
       }
 
-      if($("navigationContent").length){
+      if($("#navigationContent").length){
             var navigationContainer = "<!--PRELOADER--><div class=\"header\"><div class=\"for-sticky\"><!--LOGO--><div class=\"col-md-2 col-xs-6 logo\"><a href=\"projects.html\" style = \"font-size: 30px;\"><img class=\"logo-nav\"><b style = \"font-size:35px;\">B</b>rad</a></div><!--/.LOGO END--></div><div class=\"menu-wrap\"><nav class=\"menu\"><div class=\"menu-list\"><a data-scroll=\"\" href=\"#home\" class=\"active\"><span>Home</span></a><a data-scroll=\"\" href=\"#container-content\" onclick=\"loadTemplate()\"><span>About</span></a><a data-scroll=\"\" href=\"#work\"><span>Work</span></a><a data-scroll=\"\" href=\"#skill\"><span>Skills</span></a><a data-scroll=\"\" href=\"#education\"><span>Education</span></a><a data-scroll=\"\" href=\"#contact\"><span>Contact</span></a><a href=\"https://bradleyrgriffin.github.io/geneticAlgorithm\"><span>Genetic Algorithm</span></a></div></nav><button class=\"close-button\" id=\"close-button\" onclick=\"hideMenu()\">Close Menu</button></div><button class=\"menu-button\" id=\"open-button\" onclick=\"showMenu()\"><span></span><span></span><span></span></button><!--/.for-sticky--></div>";
             $("#navigationContent").html(navigationContainer);
       }
