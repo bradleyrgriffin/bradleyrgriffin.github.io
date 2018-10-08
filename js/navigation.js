@@ -18,16 +18,26 @@ $(function(){
 
 //Loads navigation
       if($("#navigationContent").length){
-            var navigationContainer = "<!--PRELOADER--><div class=\"header\"><div class=\"for-sticky\"><!--LOGO--><div class=\"col-md-2 col-xs-6 logo\"><a href=\"http://bradleyrgriffin.me\" style = \"font-size: 30px;\"><img class=\"logo-nav\"><b style = \"font-size:35px;\">B</b>rad</a></div><!--/.LOGO END--></div><div class=\"menu-wrap\"><nav class=\"menu\"><div class=\"menu-list\"><a href=\"http://bradleyrgriffin.me/index.html\"><span>Home</span><a data-scroll=\"\" href=\"projects\" class=\"active\"><span>Projects</span></a></a><a data-scroll=\"\" onclick=\"loadTemplate()\"><span>Genetic Algorithm</span></a><a data-scroll=\"\" onclick=\"loadTemplate()\" ><span>3D Graphics</span></a><a data-scroll=\"\" onclick=\"loadTemplate()\"><span>2D Graphics</span></a></div></nav><button class=\"close-button\" id=\"close-button\" onclick=\"hideMenu()\">Close Menu</button></div><button class=\"menu-button\" id=\"open-button\" onclick=\"showMenu()\"><span></span><span></span><span></span></button><!--/.for-sticky--></div>";
+            var navigationContainer = "<!--PRELOADER--><div class=\"header\"><div class=\"for-sticky\"><!--LOGO--><div class=\"col-md-2 col-xs-6 logo\"><a href=\"http://bradleyrgriffin.me\" style = \"font-size: 30px;\"><img class=\"logo-nav\"><b style = \"font-size:35px;\">B</b>rad</a></div><!--/.LOGO END--></div><div class=\"menu-wrap\"><nav class=\"menu\"><div class=\"menu-list\"><a href=\"http://bradleyrgriffin.me/index.html\"><span>Home</span><a id=\"home-page\" data-scroll=\"\" onclick=\"loadTemplate(1)\" class=\"active\"><span>Projects</span></a></a><a data-scroll=\"\" onclick=\"loadTemplate(2)\"><span>Genetic Algorithm</span></a><a data-scroll=\"\" onclick=\"loadTemplate()\" ><span>3D Graphics</span></a><a data-scroll=\"\" onclick=\"loadTemplate()\"><span>2D Graphics</span></a></div></nav><button class=\"close-button\" id=\"close-button\" onclick=\"hideMenu()\">Close Menu</button></div><button class=\"menu-button\" id=\"open-button\" onclick=\"showMenu()\"><span></span><span></span><span></span></button><!--/.for-sticky--></div>";
             $("#navigationContent").html(navigationContainer);
       }
 
+      $("#home-page").trigger('click');
 
 
 });
 
-function loadTemplate(){
-      $('#container-content').load("blog/createawebsite.html");
+function loadTemplate(tmpl){
+
+      switch(tmpl){
+            case 1:
+                  $('#container-content').load("pages/projectshome.html");
+                  break;
+            case 2:
+                  $('#container-content').load("pages/geneticAlgorithm.html");
+                  break;
+      }
+
 }
 
 function showMenu(){
