@@ -36,6 +36,8 @@ function loadTemplate(tmpl){
             case 2:
                   $('#container-content').load("pages/geneticAlgorithm.html");
                   break;
+            default:
+                  $('#container-content').load("blog/createawebsite.html");
       }
 
 }
