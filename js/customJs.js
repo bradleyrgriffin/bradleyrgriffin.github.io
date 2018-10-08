@@ -506,7 +506,7 @@ function toExcel(data){
 
       a.dataset.downloadurl = [contentType, a.download, a.href].join(':');
 
-      $("#download-link").html(document.body.appendChild(a));
+      $("#download-link").html(a);
 }
 
 function toExcelAllData(data){
