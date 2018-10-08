@@ -35,6 +35,7 @@ function loadTemplate(tmpl){
                   break;
             case 2:
                   $('#container-content').load("pages/geneticAlgorithm.html");
+                  main();
                   break;
             default:
                   $('#container-content').load("blog/createawebsite.html");
