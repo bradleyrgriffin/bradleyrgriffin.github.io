@@ -5,5 +5,5 @@
 $(function(){
   //Load Navigation bar
   $("#navigation-bar").load("../data/navigation.html");
-  $("#logo").html("<img src=\"../images/logo.png\" alt=\"logo\"></img>");
+  //$("#logo").html("<img src=\"../images/logo.png\" alt=\"logo\"></img>");
 });
