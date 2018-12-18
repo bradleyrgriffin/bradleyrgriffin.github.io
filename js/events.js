@@ -7,7 +7,6 @@ $(function(){
   $("#navigation-bar").load("../data/navigation.html");
   loadNotification("This notification pane is under development.","info");
   $("#footer-content").load("../data/footer.html");
-  $("#footer-content").load("../blog/createawebsite.html");
 });
 
 function loadNotification(text, ind, html){
@@ -32,4 +31,9 @@ function loadNotification(text, ind, html){
             break;
     }
   }
+}
+
+
+function loadPopup(data){
+
 }
