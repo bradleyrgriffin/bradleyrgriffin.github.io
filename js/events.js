@@ -13,7 +13,7 @@ $(function(){
 });
 
 function attachDateListener(){
-  $('#container-content').filter(':input').filter(':date').each(function(idx, dateField){
+  $('#container-content').filter(':input').filter(':data-date').each(function(idx, dateField){
     dateField.dateDropper();
   });
 }
