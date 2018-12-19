@@ -8,6 +8,8 @@ $(function(){
   loadNotification("This notification pane is under development.","info");
   $("#footer-content").load("../data/footer.html");
 
+  $('#container-content').load("../data/formbuilder.html");
+
 });
 
 
