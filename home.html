@@ -16,29 +16,25 @@
               <div class="col-sm-12 row" id="notification-body"></div>
               <div class="col-sm-12 row panel-body" id="container-content">
 
-                                <!-- Trigger/Open The Modal -->
-                  <button id="myBtn">Open Modal</button>
+                <button data-modal-trigger="trigger-demo" class="trigger">
+  Launch
+</button>
 
-                  <!-- The Modal -->
-                  <div id="myModal" class="modal">
-
-                      <!-- Modal content -->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <span class="close">&times;</span>
-                          <h2>Modal Header</h2>
-                        </div>
-                        <div class="modal-body">
-                          <p>Some text in the Modal Body</p>
-                          <p>Some other text...</p>
-                        </div>
-                        <div class="modal-footer">
-                          <h3>Modal Footer</h3>
-                        </div>
-                      </div>
-                    </div>
-
+                <div data-modal="trigger-demo" class="modal">
+                <article class="content-wrapper">
+                  <button class="close"></button>
+                  <header class="modal-header">
+                    <h2>This is a modal</h2>
+                  </header>
+                  <div class="content">
+                    <p>More modal content here</p>
                   </div>
+                  <footer class="modal-footer">
+                    <button>Okey</button>
+                    <button>Cancel</button>
+                  </footer>
+                </article>
+                </div>
 
               </div>
             </div>
