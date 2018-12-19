@@ -43,6 +43,6 @@ function addModal(){
 }
 
 function triggerModal(){
-    $('#myModel').modal('show');
-    $('#myModel').modal('toggle');
+    $('#myModal').modal('show');
+    //$('#myModel').modal('toggle');
 }
