@@ -4,9 +4,11 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="../js/events.js"></script>
+      <script src="../js/Datedropper3-master/datedropper.js"></script>
 
       <!--CSS-->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link href="../js/Datedropper3-master/datedropper.css" rel="stylesheet" type="text/css" />
 
 
 </head>
@@ -18,6 +20,12 @@
               <div class="col-sm-12 row panel-body" id="container-content">
                 <!-- Trigger the modal with a button -->
                 <button onClick="successDialog()">Click Me</button>
+                <!-- tag element -->
+<input type="text" />
+<!-- init dateDropper -->
+<script>
+$('input').dateDropper();
+</script> 
               </div>
             </div>
             <div class="col-sm-12 row" id="footer-content"></div>
