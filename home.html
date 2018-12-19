@@ -6,7 +6,6 @@
 
       <!--CSS-->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://bradleyrgriffin.me/css/custom_css.css">
 
 </head>
       <body>
@@ -16,24 +15,22 @@
               <div class="col-sm-12 row" id="notification-body"></div>
               <div class="col-sm-12 row panel-body" id="container-content">
 
-                <button data-modal-trigger="trigger-demo" class="trigger">
-  Launch
-</button>
+                <!-- Button to trigger modal -->
+                <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
 
-                <div data-modal="trigger-demo" class="modal">
-                <article class="content-wrapper">
-                  <button class="close"></button>
-                  <header class="modal-header">
-                    <h2>This is a modal</h2>
-                  </header>
-                  <div class="content">
-                    <p>More modal content here</p>
-                  </div>
-                  <footer class="modal-footer">
-                    <button>Okey</button>
-                    <button>Cancel</button>
-                  </footer>
-                </article>
+                <!-- Modal -->
+                <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3 id="myModalLabel">Modal header</h3>
+                </div>
+                <div class="modal-body">
+                  <p>One fine body…</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                  <button class="btn btn-primary">Save changes</button>
+                </div>
                 </div>
 
               </div>
