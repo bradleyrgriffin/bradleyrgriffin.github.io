@@ -13,9 +13,10 @@ $(function(){
 });
 
 function attachDateListener(){
-  $('input').each(function(idx, dateField){
-    dateField.dateDropper();
-  });
+  // $('input').each(function(idx, dateField){
+  //   dateField.dateDropper();
+  // });
+  $('#dtpckr').dateDropper();
 }
 
 function loadNotification(text, ind, html){
