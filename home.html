@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <head>
       <!--JS-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
       <script type="text/javascript" src="../js/events.js"></script>
 
       <!--CSS-->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
       <body>
@@ -14,25 +16,31 @@
             <div id="container" class="panel panel-default">
               <div class="col-sm-12 row" id="notification-body"></div>
               <div class="col-sm-12 row panel-body" id="container-content">
-
-                <!-- Button to trigger modal -->
-                <button onClick="triggerModal()">Open</button>
+                <h2>Modal Example</h2>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
                 <!-- Modal -->
-                <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                  <h3 id="myModalLabel">Modal header</h3>
-                </div>
-                <div class="modal-body">
-                  <p>One fine body…</p>
-                </div>
-                <div class="modal-footer">
-                  <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                  <button class="btn btn-primary">Save changes</button>
-                </div>
-                </div>
+                <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog">
 
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>Some text in the modal.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                
               </div>
             </div>
             <div class="col-sm-12 row" id="footer-content"></div>
