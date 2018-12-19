@@ -8,10 +8,15 @@ $(function(){
   loadNotification("This notification pane is under development.","info");
   $("#footer-content").load("../data/footer.html");
 
-  $('#fb-editor').formBuilder();
+  attachDateListener();
 
 });
 
+function attachDateListener(){
+  $('#container-content').filter(':input').filter(':date').each(function(idx, dateField){
+    dateField.dateDropper();
+  });
+}
 
 function loadNotification(text, ind, html){
   if(html){
