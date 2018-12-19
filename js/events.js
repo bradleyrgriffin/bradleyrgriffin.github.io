@@ -13,7 +13,7 @@ $(function(){
 });
 
 function attachDateListener(){
-  $("input[data-datepckr]").each(function(idx, dateField){
+  $('input').each(function(idx, dateField){
     dateField.dateDropper();
   });
 }
