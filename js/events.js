@@ -32,9 +32,7 @@ events = {custom :{
                   });
     },
     loadTemplate: function(tmpl, container, data, callback){
-      $.when(
-        events.custom.renderTmpl(tmpl, data, container)
-      $(container).html(htmlOutput);).done(function(){
+      $.when(events.custom.renderTmpl(tmpl, data, container)).done(function(){
         if(callback){
           callback();
         }
