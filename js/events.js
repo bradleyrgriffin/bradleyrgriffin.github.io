@@ -30,6 +30,16 @@ events = {custom :{
                     var html = $.templates.menu.render(data);
                     $("#sidebar-menu-wrapper").html(html);
                   });
+    },
+    loadTemplate: function(tmpl, container, data, callback){
+      $.when(
+        var template = $.templates("./templates/" + tmpl + ".html");
+        var htmlOutput = template.render(data);
+      $(container).html(htmlOutput);).done(function(){
+        if(callback){
+          callback();
+        }
+      });
     }
   }
 }
