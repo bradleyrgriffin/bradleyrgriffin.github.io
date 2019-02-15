@@ -39,7 +39,7 @@ events = {custom :{
       });
     },
     renderTmpl : function(tmpl, data, container){
-      var template = $.templates("./templates/" + tmpl + ".html");
+      var template = $.templates(events.custom.baseURL + "/templates/" + tmpl + ".html");
       var htmlOutput = template.render((data? data:{}));
       $(container).html(htmlOutput);
     }
