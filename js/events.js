@@ -33,13 +33,17 @@ events = {custom :{
     },
     loadTemplate: function(tmpl, container, data, callback){
       $.when(
-        var template = $.templates("./templates/" + tmpl + ".html");
-        var htmlOutput = template.render(data);
+        events.custom.renderTmpl(tmpl, data, container)
       $(container).html(htmlOutput);).done(function(){
         if(callback){
           callback();
         }
       });
+    },
+    renderTmpl : function(tmpl, data, container){
+      var template = $.templates("./templates/" + tmpl + ".html");
+      var htmlOutput = template.render((data? data:{}));
+      $(container).html(htmlOutput);
     }
   }
 }
