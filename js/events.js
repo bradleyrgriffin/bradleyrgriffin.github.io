@@ -39,9 +39,12 @@ events = {custom :{
       });
     },
     renderTmpl : function(tmpl, data, container){
-      var template = $.templates(events.custom.baseURL + "/templates/" + tmpl + ".html");
-      var htmlOutput = template.render((data? data:{}));
-      $(container).html(htmlOutput);
+      $.get(events.custom.baseURL + "/templates/" + tmpl + ".html", function(value){
+        var template = $.templates(value);
+        var htmlOutput = template.render((data? data:{}));
+        $(container).html(htmlOutput);
+      });
+
     }
   }
 }
