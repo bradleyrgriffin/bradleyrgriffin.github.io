@@ -23,7 +23,7 @@ events = {custom :{
                     },
     renderMenu : function(data){
                   $.when(
-                    renderTemplate("people")
+                    events.custom.renderTemplate("people")
                   )
                   .done(function() {
                     // Render once all templates for template composition are loaded
