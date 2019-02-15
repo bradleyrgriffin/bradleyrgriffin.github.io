@@ -32,7 +32,7 @@ events = {custom :{
                   });
     },
     loadTemplate: function(tmpl, container, data, callback){
-      var file = events.custom.baseURL + "/templates/" + tmpl + ".txt";
+      var file = events.custom.baseURL + "/templates/" + tmpl + ".html";
       $.when($.get(file))
        .done(function(tmplData) {
            $.templates({ tmpl: tmplData });
