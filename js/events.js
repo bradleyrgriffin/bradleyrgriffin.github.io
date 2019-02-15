@@ -32,26 +32,15 @@ events = {custom :{
                   });
     },
     loadTemplate: function(tmpl, container, data, callback){
-      $.when(events.custom.renderTmpl(tmpl, data, container)).done(function(){
-        if(callback){
-          callback();
-        }
-      });
-    },
-    renderTmpl : function(tmpl, data, container){
-      // $.get(events.custom.baseURL + "/templates/" + tmpl + ".txt", function(value){
-      //   var template = $.templates(value);
-      //   var htmlOutput = template.render((data? data:{}));
-      //   $(container).html(htmlOutput);
-      // });
-
       var file = events.custom.baseURL + "/templates/" + tmpl + ".txt";
       $.when($.get(file))
        .done(function(tmplData) {
            $.templates({ tmpl: tmplData });
            $(container).html($.render.tmpl(data));
+           if(callback){
+             callback();
+           }
        });
-
     }
   }
 }
