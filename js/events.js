@@ -44,3 +44,13 @@ events = {custom :{
     }
   }
 }
+
+//OnLoad
+$(function(){
+  var data = {menuItem:[{modId:1, modName:"Module 1"},
+                        {modId:2, modName:"Module 2"},
+                        {modId:3, modName:"Module 3"}]}
+  events.custom.loadTemplate("menu", "#sidebar-menu-wrapper", data, function(){
+    window.alert("Haha!");
+  });
+});
