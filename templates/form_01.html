@@ -1,0 +1,19 @@
+<div id="form_01" class="form">
+  {{for sections}}
+    <div id="{{:id}}-sctn" class="card">
+    {{for rows}}
+      <div id="{{:id}}-rw" class="card-body row">
+      {{for questions}}
+        <div class="form-group col-sm-4">
+          <label>{{:name}}
+            <input type="{{:type}}" class="form-control"></input>
+          </label>
+        </div>
+      {{/for}}
+      </div>
+    {{/for}}
+    </div>
+  {{/for}}
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <input type="hidden" id="formId">{{id}}</input>
+</div>
