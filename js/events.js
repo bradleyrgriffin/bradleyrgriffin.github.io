@@ -9,7 +9,7 @@ events = {custom :{
                         deferred.resolve();
                       } else {
                         $.getScript(
-                          baseURL + "templates/" + name + ".js")
+                          events.custom.baseURL + "templates/" + name + ".js")
                           .then(function() {
                             if ($.templates[name]) {
                               deferred.resolve();
@@ -23,7 +23,7 @@ events = {custom :{
                     },
     renderMenu : function(data){
                   $.when(
-                    events.custom.renderTemplate("people")
+                    events.custom.renderTemplate("menu")
                   )
                   .done(function() {
                     // Render once all templates for template composition are loaded
