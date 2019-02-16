@@ -65,7 +65,8 @@ events = {custom :{
       "id": 3
     }
   ],
-  "id": 9999
+  "id": 9999,
+  "name":"Contact Information"
 }
   }
 }
