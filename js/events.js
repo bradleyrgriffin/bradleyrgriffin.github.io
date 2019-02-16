@@ -98,6 +98,7 @@ $(function(){
 });
 
 function addData() {
+  $("#form_01_tbl").DataTable().destroy().empty();
   var data = {};
   $("#form").find("input[type!='hidden']").each(function(indx,inpt){
     inpt = $(inpt);
@@ -119,5 +120,5 @@ function addData() {
       {"data" : "email"},
       {"data" : "address"}
     ]
-  }).fnAddData([data]);
+  }).rows().add([data]).draw();
 }
