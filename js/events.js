@@ -120,5 +120,5 @@ function addData() {
       {"data" : "email"},
       {"data" : "address"}
     ]
-  }).rows().add([data]).draw();
+  }).rows.add([data]).draw();
 }
