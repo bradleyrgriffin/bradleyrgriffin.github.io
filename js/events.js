@@ -25,10 +25,12 @@ events = {custom :{
           "questions": [
             {
               "type": "text",
-              "name": "First Name"
+              "name": "First Name",
+              "id" : 0
             },{
               "type": "text",
-              "name": "Last Name"
+              "name": "Last Name",
+              "id" : 1
             }
           ],
           "id": 0
@@ -44,7 +46,8 @@ events = {custom :{
           "questions": [
             {
               "type": "email",
-              "name": "Email"
+              "name": "Email",
+              "id":2
             }
           ],
           "id": 1
@@ -60,7 +63,8 @@ events = {custom :{
           "questions": [
             {
               "type": "text",
-              "name": "Address"
+              "name": "Address",
+              "id" : 3
             }
           ],
           "id": 2
@@ -92,3 +96,20 @@ $(function(){
   });
 
 });
+
+function addData() {
+  var data = {};
+  $("#form").find("input[type!='hidden']").each(function(indx,inpt){
+    if(inpt.attr("id") === 0){
+      data.firstName = inpt.val();
+    }else if(inpt.attr("id") === 1){
+      data.lastName = inpt.val();
+    }else if(inpt.attr("id") === 2){
+      data.email = inpt.val();
+    }else if(inpt.attr("id") === 3){
+      data.address = inpt.val();
+    }
+  });
+
+  $("#datatable").DataTable().fnAddData(data);
+}

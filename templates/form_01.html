@@ -15,7 +15,7 @@
           <div id="{{:id}}-qstn" class="col-sm-3">
           <!--Questions-->
             <label>{{:name}}
-              <input type="{{:type}}" class="form-control"></input>
+              <input type="{{:type}}" class="form-control" id="{{:id}}"></input>
             </label>
           </div>
         {{/for}}
@@ -26,12 +26,13 @@
   {{/for}}
   </div>
   <div class="card-footer align-items-center">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" onClick="addData()" class="btn btn-primary">Submit</button>
     <input type="hidden" value="{{:id}}"></input>
     <input type="hidden" value="{{:module}}"></input>
   </div>
 </div>
 <div class="card">
+<h3 class="card-header">Data</h3>
 <table id="form_01_tbl" class="display card-body">
         <thead>
             <tr>
