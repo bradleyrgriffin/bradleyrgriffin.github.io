@@ -34,7 +34,8 @@ events = {custom :{
           "id": 0
         }
       ],
-      "id": 0
+      "id": 0,
+      "name":"Demographic Information"
     },
     {
       "rows": [
@@ -48,7 +49,8 @@ events = {custom :{
           "id": 1
         }
       ],
-      "id": 1
+      "id": 1,
+      "name":"Contact Information"
     },
 {
       "rows": [
@@ -59,14 +61,15 @@ events = {custom :{
               "name": "Address"
             }
           ],
-          "id": 3
+          "id": 2
         }
       ],
-      "id": 3
+      "id": 2,
+      "name":"Address Information"
     }
   ],
   "id": 9999,
-  "name":"Contact Information"
+  "name":"Subscriber Information"
 }
   }
 }
