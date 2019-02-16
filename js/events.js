@@ -17,10 +17,7 @@ events = {custom :{
                            {modId:2, modName:"Education"},
                            {modId:3, modName:"Experience"}
                          ]},
-    form_01 : {sections:[{rows:[{questions:[{}],
-                                  id:111}]
-                          id:111}],
-              id:111}
+    form_01 : {sections:[{rows:[{questions:[{}]}]}]}
   }
 }
 
