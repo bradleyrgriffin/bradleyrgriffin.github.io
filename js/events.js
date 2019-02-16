@@ -17,21 +17,13 @@ events = {custom :{
                            {modId:2, modName:"Education"},
                            {modId:3, modName:"Experience"}
                          ]},
-    form_01 : {
-       data:{sections: [
-                         {rows:[
-                                 {questions:[{name:"Email", type:"email"}, {name:"First Name:", type:"text"}], id:111},
-                                 {questions:[{name:"Email 2", type:"email"}, {name:"First Name 2:", type:"text"}], id:222}
-                               ],
-                         id: 111},
-                         {rows:[
-                                 {questions:[{name:"Email 3", type:"email"}, {name:"First Name 3:", type:"text"}], id:333},
-                                 {questions:[{name:"Email 4", type:"email"}, {name:"First Name 4:", type:"text"}], id:444}
-                               ],
-                         id: 222}
-                       ]},
-        id: 99999
-     }
+    form_01 : {sections:[{rows:[{questions:[{}],
+                                  id:111}]
+                          id:111},
+                          {rows:[{questions:[{}],
+                                  id:222}]
+                          id:222}],
+              id:111}
   }
 }
 
