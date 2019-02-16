@@ -1,10 +1,15 @@
 <div id="form" class="form card">
   <h3 class="card-header">{{:name}}</h3>
+  {{if info}}
+    <div class="alert alert-info">
+      {{infotext}}
+    </div>
+  {{/if}}
   <div class="card-body">
   {{for sections}}
     <div id="{{:id}}" class="card">
       {{if showHeader == true}}
-        <h3 class="card-header">{{:name}}</h3>
+        <h3 class="card-header bg-light">{{:name}}</h3>
       {{/if}}
     <!--Section-->
     {{for rows}}
