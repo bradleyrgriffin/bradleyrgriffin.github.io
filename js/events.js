@@ -72,9 +72,7 @@ events = {custom :{
     }
   ],
   "id": 9999,
-  "name":"Subscriber Information",
-  "info":true,
-  "infotext":"Isn't this Form amazing!?!"
+  "name":"Subscriber Information"
 }
   }
 }
