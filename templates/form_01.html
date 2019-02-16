@@ -1,12 +1,22 @@
 <div id="form_01" class="form">
   {{for sections}}
+    <div id="{{:id}}" class="card">
     <!--Section-->
     {{for rows}}
+      <div id="{{:id}}" class="card">
       <!--Rows-->
         {{for questions}}
+          <div id="{{:id}}" class="card">
           <!--Questions-->
+            <label>{{:name}}
+              <input type="{{:type}}" class="form-control"></input>
+            </label>
+          </div>
         {{/for}}
+        </div>
     {{/for}}
+    </div>
   {{/for}}
   <button type="submit" class="btn btn-primary">Submit</button>
+  <div type="hidden">{{:id}}</div>
 </div>

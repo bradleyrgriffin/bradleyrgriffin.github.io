@@ -17,7 +17,53 @@ events = {custom :{
                            {modId:2, modName:"Education"},
                            {modId:3, modName:"Experience"}
                          ]},
-    form_01 : {sections:[{rows:[{questions:[{}]}]}]}
+    form_01 : {
+  "sections": [
+    {
+      "rows": [
+        {
+          "questions": [
+            {
+              "type": "text",
+              "name": "First Name"
+            }
+          ],
+          "id": 0
+        }
+      ],
+      "id": 0
+    },
+    {
+      "rows": [
+        {
+          "questions": [
+            {
+              "type": "email",
+              "name": "Email"
+            }
+          ],
+          "id": 1
+        }
+      ],
+      "id": 1
+    },
+{
+      "rows": [
+        {
+          "questions": [
+            {
+              "type": "text",
+              "name": "Last Name"
+            }
+          ],
+          "id": 3
+        }
+      ],
+      "id": 3
+    }
+  ],
+  "id": 9999
+}
   }
 }
 
