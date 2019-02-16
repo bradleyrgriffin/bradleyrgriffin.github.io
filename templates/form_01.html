@@ -6,6 +6,7 @@
       {{if showHeader == true}}
         <h3 class="card-header bg-light">{{:name}}</h3>
       {{/if}}
+      <div class="card-body">
     <!--Section-->
     {{for rows}}
       <div id="{{:id}}-rw" class="row">
@@ -20,6 +21,7 @@
         {{/for}}
         </div>
     {{/for}}
+    </div>
     </div>
   {{/for}}
   </div>
