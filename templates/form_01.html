@@ -2,16 +2,16 @@
   <h3 class="card-header">{{:name}}</h3>
   <div class="card-body">
   {{for sections}}
-    <div id="{{:id}}" class="card">
+    <div id="{{:id}}-sctn" class="card">
       {{if showHeader == true}}
         <h3 class="card-header bg-light">{{:name}}</h3>
       {{/if}}
     <!--Section-->
     {{for rows}}
-      <div id="{{:id}}" class="form-group">
+      <div id="{{:id}}-rw" class="row">
       <!--Rows-->
         {{for questions}}
-          <div id="{{:id}}">
+          <div id="{{:id}}-qstn" class="col-sm-3">
           <!--Questions-->
             <label>{{:name}}
               <input type="{{:type}}" class="form-control"></input>
