@@ -26,6 +26,9 @@ events = {custom :{
             {
               "type": "text",
               "name": "First Name"
+            },{
+              "type": "text",
+              "name": "Last Name"
             }
           ],
           "id": 0
@@ -53,7 +56,7 @@ events = {custom :{
           "questions": [
             {
               "type": "text",
-              "name": "Last Name"
+              "name": "Address"
             }
           ],
           "id": 3
