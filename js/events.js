@@ -5,7 +5,7 @@ events = {custom :{
       $.when($.get(file))
        .done(function(tmplData) {
            $.templates({ tmpl: tmplData });
-           $(container).html($.render.tmpl(data));
+           $(container).html($.render.tmpl((data?data:{})));
            if(callback){
              callback();
            }
