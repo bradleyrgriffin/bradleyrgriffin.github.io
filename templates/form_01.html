@@ -1,5 +1,6 @@
 <div id="form" class="form card">
-  <h3>{{:name}}</h3>
+  <h3 class="card-header">{{:name}}</h3>
+  <div class="card-body">
   {{for sections}}
     <div id="{{:id}}" class="card">
     <!--Section-->
@@ -18,6 +19,9 @@
     {{/for}}
     </div>
   {{/for}}
-  <button type="submit" class="btn btn-primary">Submit</button>
-  <input type="hidden" value="{{:id}}"></input>
+  </div>
+  <div class="card-footer">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <input type="hidden" value="{{:id}}"></input>
+  </div>
 </div>
