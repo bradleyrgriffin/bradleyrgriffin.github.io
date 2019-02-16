@@ -89,7 +89,7 @@ $(function(){
     console.log("form_01 Loaded");
   });
 
-  events.custom.loadTemplate("form_01_tbl", "#footer_tbl", null, function(){
+  events.custom.loadTemplate("form_01_tbl", "#footer_tbl", {}, function(){
     $("#datatable").DataTable();
   });
 
