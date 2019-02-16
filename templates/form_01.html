@@ -3,7 +3,9 @@
   <div class="card-body">
   {{for sections}}
     <div id="{{:id}}" class="card">
-    <h3 class="card-header">{{:name}}</h3>
+      {{if showHeader == true}}
+        <h3 class="card-header">{{:name}}</h3>
+      {{/if}}
     <!--Section-->
     {{for rows}}
       <div id="{{:id}}" class="form-group row">

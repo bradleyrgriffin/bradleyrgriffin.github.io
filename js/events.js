@@ -35,7 +35,8 @@ events = {custom :{
         }
       ],
       "id": 0,
-      "name":"Demographic Information"
+      "name":"Demographic Information",
+      "showHeader": true
     },
     {
       "rows": [
@@ -50,7 +51,8 @@ events = {custom :{
         }
       ],
       "id": 1,
-      "name":"Contact Information"
+      "name":"Contact Information",
+      "showHeader": false
     },
 {
       "rows": [
@@ -65,7 +67,8 @@ events = {custom :{
         }
       ],
       "id": 2,
-      "name":"Address Information"
+      "name":"Address Information",
+      "showHeader": true
     }
   ],
   "id": 9999,
