@@ -111,5 +111,12 @@ function addData() {
     }
   });
 
-  $("#datatable").DataTable().fnAddData(data);
+  $("#datatable").DataTable({
+    "aoColumns":[
+      {"data" : "firstName"},
+      {"data" : "lastName"},
+      {"data" : "email"},
+      {"data" : "address"}
+    ]
+  }).fnAddData([data]);
 }
