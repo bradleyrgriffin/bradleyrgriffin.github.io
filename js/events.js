@@ -100,6 +100,7 @@ $(function(){
 function addData() {
   var data = {};
   $("#form").find("input[type!='hidden']").each(function(indx,inpt){
+    inpt = $(inpt);
     if(inpt.attr("id") === 0){
       data.firstName = inpt.val();
     }else if(inpt.attr("id") === 1){
@@ -111,7 +112,7 @@ function addData() {
     }
   });
 
-  $("#datatable").DataTable({
+  $("#form_01_tbl").DataTable({
     "aoColumns":[
       {"data" : "firstName"},
       {"data" : "lastName"},
