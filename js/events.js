@@ -19,10 +19,7 @@ events = {custom :{
                          ]},
     form_01 : {sections:[{rows:[{questions:[{}],
                                   id:111}]
-                          id:111},
-                          {rows:[{questions:[{}],
-                                  id:222}]
-                          id:222}],
+                          id:111}],
               id:111}
   }
 }
