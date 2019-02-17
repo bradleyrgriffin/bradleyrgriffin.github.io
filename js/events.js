@@ -107,20 +107,16 @@ $(function(){
 function addData() {
   $("#form_01_tbl").DataTable().destroy().empty();
   var aData = [];
-  var data = {};
-  $("#form").find("input[type!='hidden']").each(function(indx,inpt){
-    inpt = $(inpt);
-    if(inpt.attr("id") === 0){
-      data.firstName = inpt.val();
-    }else if(inpt.attr("id") === 1){
-      data.lastName = inpt.val();
-    }else if(inpt.attr("id") === 2){
-      data.email = inpt.val();
-    }else if(inpt.attr("id") === 3){
-      data.address = inpt.val();
-    }
-  });
-  aData.push(data);
+
+  var vData = {
+    firstName : $("input[id='0']").val(),
+    lastName : $("input[id='1']").val(),
+    email : $("input[id='2']").val(),
+    address : $("input[id='3']").val()
+  }
+
+
+  aData.push(vData);
 
   $("#form_01_tbl").DataTable({
     "aoColumns":[
@@ -129,5 +125,5 @@ function addData() {
       {"data" : "email"},
       {"data" : "address"}
     ]
-  }).fnAddData(aData).draw();
+  }).rows().add(aData).draw();
 }
