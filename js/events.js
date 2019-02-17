@@ -91,7 +91,14 @@ $(function(){
 
   events.custom.loadTemplate("form_01", "#page-content-wrapper", events.data.form_01, function(){
     console.log("form_01 Loaded");
-    $("#form_01_tbl").DataTable();
+    $("#form_01_tbl").DataTable({
+      "aoColumns":[
+        {"data" : "firstName"},
+        {"data" : "lastName"},
+        {"data" : "email"},
+        {"data" : "address"}
+      ]
+    });
     console.log("Datatable generated");
   });
 
@@ -99,6 +106,7 @@ $(function(){
 
 function addData() {
   $("#form_01_tbl").DataTable().destroy().empty();
+  var aData = [];
   var data = {};
   $("#form").find("input[type!='hidden']").each(function(indx,inpt){
     inpt = $(inpt);
@@ -112,6 +120,7 @@ function addData() {
       data.address = inpt.val();
     }
   });
+  aData.push(data);
 
   $("#form_01_tbl").DataTable({
     "aoColumns":[
@@ -120,5 +129,5 @@ function addData() {
       {"data" : "email"},
       {"data" : "address"}
     ]
-  }).rows.add([data]).draw();
+  }).fnAddData(aData).draw();
 }
