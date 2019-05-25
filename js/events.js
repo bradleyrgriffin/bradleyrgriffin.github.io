@@ -89,7 +89,7 @@ $(function(){
     console.log("Menu Loaded");
   });
 
-  events.custom.loadTemplate("form_01", "#page-content-wrapper", events.data.form_01, function(){
+  events.custom.loadTemplate("form_01_tbl", "#page-content-wrapper", events.data.form_01, function(){
     console.log("form_01 Loaded");
     $("#form_01_tbl").DataTable({
       "aoColumns":[

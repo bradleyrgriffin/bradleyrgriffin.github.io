@@ -1,7 +1,6 @@
-<div class="list-group list-group-flush">
-    <ul>
-        {{for menuItem}}
-          <a class="list-group-item list-group-item-action bg-light" onClick="loadPage({{:modId}})">{{:modName}}</a>
-        {{/for}}
-    </ul>
-  </div>
+{{for menuItem}}
+  <li><a class="{{if #index === 0}}active{{/if}}"
+          href="#"
+          onClick="loadPage({{:modId}})">{{:modName}}</a>
+  </li>
+{{/for}}
