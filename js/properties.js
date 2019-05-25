@@ -2,8 +2,9 @@ props = {
   // This can have nested stuff, arrays, etc.
   modules: {1 : 'about',
             2 : 'education',
-            3 : 'contact',
-            4 : 'website-design'},
+            3 : 'experience',
+            4 : 'contact',
+            5 : 'website-design'},
   text : {
     TXT_SUCCESS_MSG : 'Operation Completed Successfully!',
     TXT_FAILURE_MSG : 'Operation Failed.',
