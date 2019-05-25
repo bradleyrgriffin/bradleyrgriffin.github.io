@@ -108,8 +108,7 @@ $(function(){
                     {"mDataProp" : "lastName"},
                     {"mDataProp" : "email"},
                     {"mDataProp" : "address"}
-                  ],
-                  buttons : buttons
+                  ]
                 });
 
 
@@ -135,8 +134,7 @@ function refreshContactTable() {
                     {"mDataProp" : "lastName"},
                     {"mDataProp" : "email"},
                     {"mDataProp" : "address"}
-                  ],
-                  buttons : buttons
+                  ]
                 });
 
 
