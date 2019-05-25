@@ -21,7 +21,7 @@ function refreshContactTable() {
                 });
 }
 
-functions login(){
+function login(){
   var form = $('.form-signin');
   var username = form.find('input[type="text"]').val();
   var password = form.find('input[type="password"]').val();
