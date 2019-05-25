@@ -33,23 +33,23 @@ function login(){
 
 function displayModal(properties){
   var defaultProperties = {
-    defaultButtons : '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>',
-    defaultHeader : props.text.TXT_SUCCESS_HEAD,
-    defaultBody : props.text.TXT_SUCCESS_MSG
+    buttons : '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>',
+    header : props.text.TXT_SUCCESS_HEAD,
+    body : props.text.TXT_SUCCESS_MSG
 
   };
 
   if(properties){
     if(!properties.header){
-      properties.header = defaultProperties.defaultHeader;
+      properties.header = defaultProperties.header;
     }
 
     if(!properties.body){
-      properties.body = defaultProperties.defaultBody;
+      properties.body = defaultProperties.body;
     }
 
     if(!properties.buttons){
-      properties.buttons = defaultProperties.defaultButtons;
+      properties.buttons = defaultProperties.buttons;
     }
   }else{
     properties = defaultProperties;
