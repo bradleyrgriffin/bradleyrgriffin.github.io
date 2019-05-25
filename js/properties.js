@@ -15,9 +15,11 @@
 //                   }
 // }
 
-gOptions = {
+props = {
   // This can have nested stuff, arrays, etc.
-  color: 'red',
+  modules: {1 : 'about',
+            2 : 'education',
+            3 : 'contact'},
   size: 'big',
   enabled: true,
   count: 5
