@@ -27,7 +27,7 @@ function login(){
   var password = form.find('input[type="password"]').val();
 
   if(username === props.adminLoginCredentials.username && password === props.adminLoginCredentials.password){
-    dispalyModal();
+    displayModal();
   }
 }
 
