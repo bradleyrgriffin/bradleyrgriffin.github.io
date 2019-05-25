@@ -20,3 +20,45 @@ function refreshContactTable() {
                   ]
                 });
 }
+
+functions login(){
+  var form = $('.form-signin');
+  var username = form.find('input[type="text"]').val();
+  var password = form.find('input[type="password"]').val();
+
+  if(username === props.adminLoginCredentials.username && password === props.adminLoginCredentials.password){
+    dispalyModal();
+  }
+}
+
+function displayModal(properties){
+  var defaultProperties = {
+    defaultButtons : '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>',
+    defaultHeader : props.text.TXT_SUCCESS_HEAD,
+    defaultBody : props.text.TXT_SUCCESS_MSG
+
+  };
+
+  if(properties){
+    if(!properties.header){
+      properties.header = defaultProperties.defaultHeader;
+    }
+
+    if(!properties.body){
+      properties.body = defaultProperties.defaultBody;
+    }
+
+    if(!properties.buttons){
+      properties.buttons = defaultProperties.defaultButtons;
+    }
+  }else{
+    properties = defaultProperties;
+  }
+
+
+  var modal = '<div class="modal fade" id="modal" role="dialog"><div class="modal-dialog"><!-- Modal content--><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">' + properties.header + '</h4></div><div class="modal-body"><p>' + properties.body + '</p></div><div class="modal-footer">' + properties.buttons + '</div></div></div></div>';
+  var jqModal = $(modal);
+
+  $('body').append(jqModal);
+  $('#modal').modal('show');
+}

@@ -9,6 +9,7 @@ props = {
             7 : 'sign-up'},
   text : {
     TXT_SUCCESS_MSG : 'Operation Completed Successfully!',
+    TXT_SUCCESS_HEAD : 'Success!',
     TXT_FAILURE_MSG : 'Operation Failed.',
     TXT_SUBMIT_BTN : 'Submit',
     TXT_SAVE_BTN : 'Save',
