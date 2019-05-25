@@ -78,7 +78,8 @@ events = {custom :{
   "id": 9999,
   "name":"Subscriber Information",
   "module":"Forms"
-}
+},
+form_01_tbl_data : []
   }
 }
 
@@ -89,34 +90,40 @@ $(function(){
     console.log("Menu Loaded");
   });
 
-  events.custom.loadTemplate("form_01_tbl", "#page-content-wrapper", events.data.form_01, function(){
+  events.custom.loadTemplate("form_01_tbl", "#page-content-wrapper", events.data.form_01_tbl_data, function(){
     console.log("form_01 Loaded");
+
+    var buttons = [];
+    buttons.push({text: 'Add',
+                  action: function(e, dt, node, config){
+                    events.custom.loadTemplate("form_01", "#page-content-wrapper", events.data.form_01)
+                  }
+                });
+
     $("#form_01_tbl").DataTable({
       "aoColumns":[
         {"data" : "firstName"},
         {"data" : "lastName"},
         {"data" : "email"},
         {"data" : "address"}
-      ]
-    });
+      ],
+      buttons: buttons
+    }).rows().add(events.data.form_01_tbl_data).draw();
+
+
     console.log("Datatable generated");
   });
 
 });
 
-function addData() {
+function refreshContactTable() {
   $("#form_01_tbl").DataTable().destroy().empty();
-  var aData = [];
-
-  var vData = {
-    firstName : $("input[id='0']").val(),
-    lastName : $("input[id='1']").val(),
-    email : $("input[id='2']").val(),
-    address : $("input[id='3']").val()
-  }
-
-
-  aData.push(vData);
+  var buttons = [];
+  buttons.push({text: 'Add',
+                action: function(e, dt, node, config){
+                  events.custom.loadTemplate("form_01", "#page-content-wrapper", events.data.form_01)
+                }
+              });
 
   $("#form_01_tbl").DataTable({
     "aoColumns":[
@@ -124,6 +131,16 @@ function addData() {
       {"data" : "lastName"},
       {"data" : "email"},
       {"data" : "address"}
-    ]
-  }).rows().add(aData).draw();
+    ],
+    buttons: buttons
+  }).rows().add(events.data.form_01_tbl_data).draw();
+
+
+  console.log("Datatable generated");
+}
+
+function addContactData(){
+
+
+  events.data.form_01_tbl_data.push({firstName : "brad"});
 }
