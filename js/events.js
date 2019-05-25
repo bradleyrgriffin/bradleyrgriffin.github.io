@@ -108,7 +108,7 @@ $(function(){
                     {"data" : "address"}
                   ],
                   buttons: buttons
-                }).fnAddData(events.data.form_01_tbl_data)
+                }).fnAddData(events.data.form_01_tbl_data);
 
 
     console.log("Datatable generated");
@@ -125,15 +125,15 @@ function refreshContactTable() {
                 }
               });
 
-  $("#form_01_tbl").DataTable({
-    "aoColumns":[
-      {"data" : "firstName"},
-      {"data" : "lastName"},
-      {"data" : "email"},
-      {"data" : "address"}
-    ],
-    buttons: buttons
-  }).rows().add(events.data.form_01_tbl_data).draw();
+              $("#form_01_tbl").dataTable({
+                "aoColumns":[
+                  {"data" : "firstName"},
+                  {"data" : "lastName"},
+                  {"data" : "email"},
+                  {"data" : "address"}
+                ],
+                buttons: buttons
+              }).fnAddData(events.data.form_01_tbl_data);
 
 
   console.log("Datatable generated");
