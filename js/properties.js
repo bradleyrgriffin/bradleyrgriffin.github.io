@@ -1,4 +1,4 @@
-var props = {modules:{
+props = {modules:{
                         1: 'about',
                         2: 'education'
                         3: 'experience',
@@ -15,4 +15,4 @@ var props = {modules:{
                   }
 
 
-};
+}
