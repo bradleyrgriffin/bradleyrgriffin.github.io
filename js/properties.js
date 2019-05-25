@@ -1,6 +1,6 @@
 props = {modules:{
                         1: 'about',
-                        2: 'education'
+                        2: 'education',
                         3: 'experience',
                         4: 'contact',
                         5: 'website-design'
@@ -13,6 +13,4 @@ props = {modules:{
                   TXT_CANCEL_BTN = 'Cancel',
                   TXT_BTN_EXIT = 'Exit'
                   }
-
-
 }
