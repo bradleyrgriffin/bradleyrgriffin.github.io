@@ -12,5 +12,6 @@ props = {
     TXT_SAVE_BTN : 'Save',
     TXT_CANCEL_BTN : 'Cancel',
     TXT_BTN_EXIT : 'Exit'
-  }
+  },
+  websiteName : "Griffin"
 }

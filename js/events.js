@@ -50,4 +50,7 @@ $(function(){
   //Click First Item
   $('#sidebar-menu-wrapper > li > a').first().click();
 
+  //Set Website name
+  $('.navbar-brand').html(props.websiteName);
+
 });
