@@ -101,14 +101,16 @@ $(function(){
                 });
 
                 $("#form_01_tbl").dataTable({
+                  retrieve: true,
+                  "aaData": events.data.form_01_tbl.data,
                   "aoColumns":[
-                    {"data" : "firstName"},
-                    {"data" : "lastName"},
-                    {"data" : "email"},
-                    {"data" : "address"}
+                    {"mDataProp" : "firstName"},
+                    {"mDataProp" : "lastName"},
+                    {"mDataProp" : "email"},
+                    {"mDataProp" : "address"}
                   ],
-                  buttons: buttons
-                }).fnAddData(events.data.form_01_tbl.data);
+                  buttons : buttons
+                });
 
 
     console.log("Datatable generated");
@@ -126,14 +128,16 @@ function refreshContactTable() {
               });
 
               $("#form_01_tbl").dataTable({
-                "aoColumns":[
-                  {"data" : "firstName"},
-                  {"data" : "lastName"},
-                  {"data" : "email"},
-                  {"data" : "address"}
-                ],
-                buttons: buttons
-              }).fnAddData(events.data.form_01_tbl.data);
+                  retrieve: true,
+                  "aaData": events.data.form_01_tbl.data,
+                  "aoColumns":[
+                    {"mDataProp" : "firstName"},
+                    {"mDataProp" : "lastName"},
+                    {"mDataProp" : "email"},
+                    {"mDataProp" : "address"}
+                  ],
+                  buttons : buttons
+                });
 
 
   console.log("Datatable generated");
