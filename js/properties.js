@@ -4,7 +4,9 @@ props = {
             2 : 'education',
             3 : 'experience',
             4 : 'contact',
-            5 : 'website-design'},
+            5 : 'website-design',
+            6 : 'login',
+            7 : 'sign-up'},
   text : {
     TXT_SUCCESS_MSG : 'Operation Completed Successfully!',
     TXT_FAILURE_MSG : 'Operation Failed.',
@@ -13,5 +15,7 @@ props = {
     TXT_CANCEL_BTN : 'Cancel',
     TXT_BTN_EXIT : 'Exit'
   },
-  websiteName : "Griffin"
+  websiteName : "Griffin",
+  adminLoginCredentials : {username : "brad.raymond.griffin@gmail.com",
+                           password : "q1w2e3r4"}
 }
