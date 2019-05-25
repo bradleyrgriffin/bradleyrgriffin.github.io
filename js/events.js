@@ -79,7 +79,7 @@ events = {custom :{
   "name":"Subscriber Information",
   "module":"Forms"
 },
-form_01_tbl_data : []
+form_01_tbl : {data:[]}
   }
 }
 
@@ -108,7 +108,7 @@ $(function(){
                     {"data" : "address"}
                   ],
                   buttons: buttons
-                }).fnAddData(events.data.form_01_tbl_data);
+                }).fnAddData(events.data.form_01_tbl.data);
 
 
     console.log("Datatable generated");
@@ -133,7 +133,7 @@ function refreshContactTable() {
                   {"data" : "address"}
                 ],
                 buttons: buttons
-              }).fnAddData(events.data.form_01_tbl_data);
+              }).fnAddData(events.data.form_01_tbl.data);
 
 
   console.log("Datatable generated");
