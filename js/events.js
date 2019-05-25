@@ -90,30 +90,7 @@ $(function(){
     console.log("Menu Loaded");
   });
 
-  events.custom.loadTemplate("form_01_tbl", "#page-content-wrapper", events.data.form_01_tbl_data, function(){
-    console.log("form_01 Loaded");
-
-    var buttons = [];
-    buttons.push({text: 'Add',
-                  action: function(e, dt, node, config){
-                    events.custom.loadTemplate("form_01", "#page-content-wrapper", events.data.form_01)
-                  }
-                });
-
-                $("#form_01_tbl").dataTable({
-                  retrieve: true,
-                  "aaData": events.data.form_01_tbl.data,
-                  "aoColumns":[
-                    {"mDataProp" : "firstName"},
-                    {"mDataProp" : "lastName"},
-                    {"mDataProp" : "email"},
-                    {"mDataProp" : "address"}
-                  ]
-                });
-
-
-    console.log("Datatable generated");
-  });
+  $('#sidebar-menu-wrapper > li > a').first().click();
 
 });
 
