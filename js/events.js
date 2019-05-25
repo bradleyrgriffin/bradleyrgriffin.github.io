@@ -19,7 +19,7 @@ events = {custom :{
                            {modId:4, modName:"Contact"},
                            {modId:5, modName:"Website Design"}
                          ]},
-    tables : { contact: {data: []},
+    tables : { contact: {data: []}},
     pages : {'about' : {firstName : "Bradley",
                         lastName : "Griffin",
                         emailAddress : "brad.raymond.griffin@gmail.com"},
@@ -34,9 +34,8 @@ events = {custom :{
                         emailAddress : "brad.raymond.griffin@gmail.com"},
             'website-design' : {firstName : "Bradley",
                                 lastName : "Griffin",
-                                emailAddress : "brad.raymond.griffin@gmail.com"}}
-
-    }
+                                emailAddress : "brad.raymond.griffin@gmail.com"}
+            }
   }
 }
 
