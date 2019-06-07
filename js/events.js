@@ -13,6 +13,7 @@ events = {custom :{
     }
   },
   data: {
+    globals :{loggedUserName: null},
     menuItems : {menuItem:[{modId:1, modName:"About"},
                            {modId:2, modName:"Education"},
                            {modId:3, modName:"Experience"},
@@ -34,7 +35,8 @@ events = {custom :{
                         emailAddress : "brad.raymond.griffin@gmail.com"},
             'website-design' : {firstName : "Bradley",
                                 lastName : "Griffin",
-                                emailAddress : "brad.raymond.griffin@gmail.com"}
+                                emailAddress : "brad.raymond.griffin@gmail.com"},
+            'logged-in' : {loggedInUser: events.data.globals.loggedUserName}
             }
   }
 }

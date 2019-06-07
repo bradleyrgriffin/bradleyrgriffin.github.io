@@ -27,6 +27,8 @@ function login(){
   var password = form.find('input[type="password"]').val();
 
   if(username === props.adminLoginCredentials.username && password === props.adminLoginCredentials.password){
+    events.data.globals.loggedUserName = username;
+    loadPage(8);
     displayModal();
   }
 }
