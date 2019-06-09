@@ -7,7 +7,8 @@ props = {
             5 : 'website-design',
             6 : 'login',
             7 : 'sign-up',
-            8 : 'logged-in'},
+            8 : 'logged-in',
+            9 : 'logged-out'},
   text : {
     TXT_SUCCESS_MSG : 'Operation Completed Successfully!',
     TXT_SUCCESS_HEAD : 'Success!',

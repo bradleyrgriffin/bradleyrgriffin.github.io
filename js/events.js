@@ -35,7 +35,8 @@ events = {custom :{
             'website-design' : {firstName : "Bradley",
                                 lastName : "Griffin",
                                 emailAddress : "brad.raymond.griffin@gmail.com"},
-            'logged-in' : {}
+            'logged-in' : {},
+            'login' : {header : "Sign in"}
             }
   }
 }

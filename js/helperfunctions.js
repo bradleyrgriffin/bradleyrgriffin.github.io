@@ -27,10 +27,26 @@ function login(){
   var password = form.find('input[type="password"]').val();
 
   if(username === props.adminLoginCredentials.username && password === props.adminLoginCredentials.password){
+
     events.data.pages['logged-in'].loggedInUserName = username;
+    $('.navbar-right').find('li').first().prepend('<li><p>Hi ' + username + '!</p></li>');
     loadPage(8);
+    var loginButton = $('a:contains(Login)');
+    loginButton.val('Logout');
+    loginButton.attr('onclick', 'logout()');
+
     displayModal();
   }
+}
+
+function logout(){
+  $('.navbar-right').find('li').first().detach();
+  events.data.pages['logged-in'].loggedInUserName = null;
+  loadPage(9);
+  var logoutButton = $('a:contains(Logout)');
+  logoutButton.val('Login');
+  logoutButton.attr('onclick', 'login()');
+  displayModal();
 }
 
 function displayModal(properties){
