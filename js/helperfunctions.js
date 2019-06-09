@@ -29,7 +29,7 @@ function login(){
   if(username === props.adminLoginCredentials.username && password === props.adminLoginCredentials.password){
 
     events.data.pages['logged-in'].loggedInUserName = username;
-    $('.navbar-right').find('li').first().prepend('<li><p>Hi ' + username + '!</p></li>');
+    $('.navbar-right').prepend('<li><span>Hi ' + username + '!</span></li>');
     loadPage(8);
     var loginButton = $('a:contains(Login)');
     loginButton.val('Logout');
