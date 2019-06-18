@@ -1,3 +1,5 @@
+var appNavigation = {currentAppId : null};
+
 function loadPage(pageId, data, callbackFunction){
   //Get File name For Template To Load:
   var templateName = props.modules[pageId];
@@ -5,6 +7,14 @@ function loadPage(pageId, data, callbackFunction){
     data = events.data.pages[templateName];
   }
 
+  appNavigation.currentAppId = pageId;
+  if(!callbackFunction){
+    callbackFunction = function(){
+      if(props.modulesWithTables[pageId].display){
+        generateDatatable('#' + props.modulesWithTables[pageId].tableName, events.data.tables[pageId].data);
+      }
+    };
+  }
   events.custom.loadTemplate(templateName, '#page-content-wrapper', data?data:{}, callbackFunction);
 }
 
@@ -79,4 +89,35 @@ function displayModal(properties){
 
   $('body').append(jqModal);
   $('#modal').modal('show');
+}
+
+function generateDatatable(container, data, configuration){
+  if(!container){
+    container = '#page-content-wrapper';
+  }
+  if(!configuration){
+    configuration = {columns : [{"column" : "id"},
+                                {"column" : "name"},
+                                {"column" : "createdDate"},
+                                {"column" : "modifiedDate"}],
+                    retrieve : true};
+  }
+  if(!data){
+    data = [];
+  }
+
+  var renamedColumn = {};
+  var renamedColumns = [];
+  $.each(configuration.columns, function(indx, col){
+    renamedColumn["mDataProp"] = col["column"];
+    renamedColumns.push(renamedColumn);
+  });
+  configuration.columns = renamedColumns;
+
+  container.dataTable({
+      retrieve: configuration.retrieve,
+      "aaData": data,
+      "aoColumns": configuration.columns
+    });
+
 }

@@ -19,7 +19,7 @@ events = {custom :{
                            {modId:4, modName:"Contact"},
                            {modId:5, modName:"Website Design"}
                          ]},
-    tables : { contact: {data: []}},
+    tables : { 4 : {data: [{id: 1, name : 'Bradley Griffin', createdDate : new Date(), modifiedDate : new Date()}]}},
     pages : {'about' : {firstName : "Bradley",
                         lastName : "Griffin",
                         emailAddress : "brad.raymond.griffin@gmail.com"},
@@ -53,5 +53,7 @@ $(function(){
 
   //Set Website name
   $('.navbar-brand').html(props.websiteName);
+
+  window.document.title = props.websiteHeader;
 
 });

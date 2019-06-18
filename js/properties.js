@@ -9,6 +9,16 @@ props = {
             7 : 'sign-up',
             8 : 'logged-in',
             9 : 'logged-out'},
+  modulesWithTables : {1 : {false},
+                       2 : {false},
+                       3 : {false},
+                       4 : {display : true,
+                            tableName : 'contact-table'},
+                       5 : {false},
+                       6 : {false},
+                       7 : {false},
+                       8 : {false},
+                       9 : {false}},
   text : {
     TXT_SUCCESS_MSG : 'Operation Completed Successfully!',
     TXT_SUCCESS_HEAD : 'Success!',
@@ -19,6 +29,7 @@ props = {
     TXT_BTN_EXIT : 'Exit'
   },
   websiteName : "Griffin",
+  websiteHeader : "Griffin Web App",
   adminLoginCredentials : {username : "brad.raymond.griffin@gmail.com",
                            password : "q1w2e3r4"}
 }
