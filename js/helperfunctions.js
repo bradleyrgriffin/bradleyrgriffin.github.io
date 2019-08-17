@@ -114,7 +114,7 @@ function generateDatatable(container, data, configuration){
   });
   configuration.columns = renamedColumns;
 
-  container.dataTable({
+  $(container).dataTable({
       retrieve: configuration.retrieve,
       "aaData": data,
       "aoColumns": configuration.columns
