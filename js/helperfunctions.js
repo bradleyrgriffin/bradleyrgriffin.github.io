@@ -109,7 +109,7 @@ function generateDatatable(container, data, configuration){
   var renamedColumn = {};
   var renamedColumns = [];
   $.each(configuration.columns, function(indx, col){
-    renamedColumn["mDataProp"] = col["column"];
+    renamedColumn.add({"mDataProp" : col["column"]});
     renamedColumns.push(renamedColumn);
   });
   configuration.columns = renamedColumns;
