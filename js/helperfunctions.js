@@ -41,7 +41,7 @@ function login(){
   var password = form.find('input[type="password"]').val();
 
   if(username === props.adminLoginCredentials.username && password === props.adminLoginCredentials.password){
-
+    createCookie({"username" : username});
     events.data.pages['logged-in'].loggedInUserName = username;
     $('.navbar-right').prepend('<li><span>Hi ' + username + '!</span></li>');
     loadPage(8);
@@ -50,7 +50,51 @@ function login(){
     loginButton.attr('onclick', 'logout()');
 
     displayModal();
+
+    updateRoleBasedMenu();
   }
+}
+
+function updateRoleBasedMenu(){
+  var cookieData = getCookies();
+  if(cookieData["username"] === props.adminLoginCredentials.username){
+    if(props.adminLoginCredentials.role){
+      $('#sidebar-menu-wrapper').append('<li><a onclick="loadPage(' + 10 + ')">Administrator</a></li>');
+    }
+  }
+}
+
+//Data should be {} with key/value pairs
+function createCookie(data){
+  var currentCookies = getCookies();
+  if(!currentCookies){
+    currentCookies={};
+  }
+
+  $.each(data, function(key, value){
+    currentCookies[key] = value;
+  });
+
+  var cookieString = "";
+  //Generate Cookie from K/V pairs
+  $.each(currentCookies, function(key, value){
+    cookieString += key + "+" + value + ";";
+  });
+  document.cookie = cookieString + "path=/;expires=" + new Date()";";
+}
+
+function getCookies(){
+  var c = document.cookie;
+  var cData = [];
+  if(c){
+    cData = c.split(";");
+  }
+  var individualCookies = {};
+  $.each(cData, function(indx, str){
+    var cookie = str.split("=");
+    individualCookies[cookie[0]] = cookie[1];
+  });
+  return individualCookies;
 }
 
 function logout(){
