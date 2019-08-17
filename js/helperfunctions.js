@@ -16,6 +16,10 @@ function loadPage(pageId, data, callbackFunction){
     };
   }
   events.custom.loadTemplate(templateName, '#page-content-wrapper', data?data:{}, callbackFunction);
+
+  //Then Pre-pend the tab-list
+  $('#page-content-wrapper').prepend('<div id="moduleTabList"></div>');
+  events.custom.loadTemplate('tabList', '#moduleTabList', props.tabList[pageId]?data:{});
 }
 
 function refreshContactTable() {
