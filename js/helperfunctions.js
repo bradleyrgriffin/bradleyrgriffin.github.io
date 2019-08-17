@@ -125,6 +125,7 @@ function addMenuPage(){
   $.each(events.data.menuItems.menuItem, function(indx, itm){
     itm.modId > maxId?maxId=itm.modId:console.log(itm.modName + ' Module skipped.');
   });
+  maxId++;
   events.data.menuItems.menuItem.push({modId: maxId, modName: 'New Module' + maxId.toString()});
   $('#sidebar-menu-wrapper').append('<li><a onclick="loadPage(' + maxId + ')">' + 'New Module' + maxId.toString() + '</a></li>');
 }
