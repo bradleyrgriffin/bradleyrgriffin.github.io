@@ -1,7 +1,3 @@
-<div class="list-group list-group-flush">
-    <ul class="nav navbar-nav">
-        {{for menuItem}}
-          <li><a class="list-group-item list-group-item-action bg-light" onClick="loadPage({{:modId}})">{{:modName}}</a></li>
-        {{/for}}
-    </ul>
-  </div>
+{{for menuItem}}
+  <li><a class="list-group-item list-group-item-action bg-dark" onClick="loadPage({{:modId}})">{{:modName}}</a></li>
+{{/for}}
