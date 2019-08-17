@@ -1,4 +1,4 @@
-events = {custom :{
+var events = {custom :{
     baseURL : location.protocol + "//" + location.host,
     loadTemplate: function(tmpl, container, data, callback){
       var file = events.custom.baseURL + "/templates/" + tmpl + ".html";
@@ -19,7 +19,8 @@ events = {custom :{
                            {modId:4, modName:"Contact"},
                            {modId:5, modName:"Website Design"}
                          ]},
-    tables : { 4 : {data: [{id: 1, name : 'Bradley Griffin', createdDate : new Date(), modifiedDate : new Date()}]}},
+    tables : { 4 : {data: [{id: 1, name : 'Bradley Griffin', createdDate : new Date("MM/DD/YYYY"), modifiedDate : new Date("MM/DD/YYYY")},
+                           {id: 2, name: 'Brad Griffin', createdDate : new Date("MM/DD/YYYY"), modifiedDate: new Date("MM/DD/YYYY")}]}},
     pages : {'about' : {firstName : "Bradley",
                         lastName : "Griffin",
                         emailAddress : "brad.raymond.griffin@gmail.com"},

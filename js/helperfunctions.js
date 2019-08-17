@@ -119,3 +119,11 @@ function generateDatatable(container, data, configuration){
     });
 
 }
+
+function addMenuPage(){
+  var maxId = 0;
+  $.each(events.data.menuItems.menuItem, function(indx, itm){
+    itm.modId > maxId?maxId=itm.modId:console.log(itm.modName + ' Module skipped.');
+  });
+  events.data.menuItems.menuItem.push({modId: maxId, modName: 'New Module' + maxId.toString()});
+}
