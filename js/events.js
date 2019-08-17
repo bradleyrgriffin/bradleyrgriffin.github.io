@@ -19,8 +19,8 @@ var events = {custom :{
                            {modId:4, modName:"Contact"},
                            {modId:5, modName:"Website Design"}
                          ]},
-    tables : { 4 : {data: [{id: 1, name : 'Bradley Griffin', createdDate : new Date("MM/DD/YYYY"), modifiedDate : new Date("MM/DD/YYYY")},
-                           {id: 2, name: 'Brad Griffin', createdDate : new Date("MM/DD/YYYY"), modifiedDate: new Date("MM/DD/YYYY")}]}},
+    tables : { 4 : {data: [{id: 1, name : 'Bradley Griffin', createdDate : new Date("01/01/2019"), modifiedDate : new Date("01/01/2019")},
+                           {id: 2, name: 'Brad Griffin', createdDate : new Date("01/01/2019"), modifiedDate: new Date("01/01/2019")}]}},
     pages : {'about' : {firstName : "Bradley",
                         lastName : "Griffin",
                         emailAddress : "brad.raymond.griffin@gmail.com"},

@@ -1,4 +1,4 @@
-props = {
+var props = {
   // This can have nested stuff, arrays, etc.
   modules: {1 : 'about',
             2 : 'education',

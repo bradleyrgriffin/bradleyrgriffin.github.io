@@ -122,10 +122,10 @@ function generateDatatable(container, data, configuration){
 
 function addMenuPage(){
   var maxId = 0;
-  $.each(events.data.menuItems.menuItem, function(indx, itm){
+  $.each(props.modules, function(indx, itm){
     itm.modId > maxId?maxId=itm.modId:console.log(itm.modName + ' Module skipped.');
   });
   maxId++;
-  events.data.menuItems.menuItem.push({modId: maxId, modName: 'New Module' + maxId.toString()});
+  props.modules.push({modId: maxId, modName: 'New Module' + maxId.toString()});
   $('#sidebar-menu-wrapper').append('<li><a onclick="loadPage(' + maxId + ')">' + 'New Module' + maxId.toString() + '</a></li>');
 }
