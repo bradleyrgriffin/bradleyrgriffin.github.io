@@ -80,7 +80,7 @@ function createCookie(data){
   $.each(currentCookies, function(key, value){
     cookieString += key + "+" + value + ";";
   });
-  document.cookie = cookieString + "path=/;expires=" + new Date()";";
+  document.cookie = cookieString + "path=/;expires=" + new Date() + ";";
 }
 
 function getCookies(){
