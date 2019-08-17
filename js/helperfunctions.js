@@ -126,5 +126,5 @@ function addMenuPage(){
     itm.modId > maxId?maxId=itm.modId:console.log(itm.modName + ' Module skipped.');
   });
   events.data.menuItems.menuItem.push({modId: maxId, modName: 'New Module' + maxId.toString()});
-  $('#sidebar-menu-wrapper').find('li:last').append('<li><a onclick="loadPage(' + maxId + ')">' + 'New Module' + maxId.toString() + '</a></li>');
+  $('#sidebar-menu-wrapper').append('<li><a onclick="loadPage(' + maxId + ')">' + 'New Module' + maxId.toString() + '</a></li>');
 }
