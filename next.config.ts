@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
     { dev, dir, outDir, distDir, buildId }
   ) {
     return {
+      ...defaultPathMap,
       '/': { page: '/' },
       '/projects': { page: '/projects' },
       '/projects/geneticAlgorithm.html': {
