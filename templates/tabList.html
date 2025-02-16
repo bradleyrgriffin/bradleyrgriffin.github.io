@@ -1,5 +1,0 @@
-<ul class="nav nav-pills">
-{{for modules}}
-  <li><a {{if #index == 0 onerror=''}} class="active" {{/if}}onclick="loadTab({{attr:id}})">{{attr:name}}</a></li>
-{{/for}}
-</ul>
