@@ -2,7 +2,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { Footer } from './Footer';
-import { email, facebook, linkedIn } from '../../constants/contactInformation';
+import { email } from '../../constants/contactInformation';
 
 describe('Footer', () => {
   test('renders the footer component', () => {

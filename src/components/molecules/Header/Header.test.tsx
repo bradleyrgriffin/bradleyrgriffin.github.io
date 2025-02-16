@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Button from '@mui/material/Button';
 import { Header } from './Header';
 import { ThemeProvider } from '@emotion/react';
 import { theme } from '@/theme';

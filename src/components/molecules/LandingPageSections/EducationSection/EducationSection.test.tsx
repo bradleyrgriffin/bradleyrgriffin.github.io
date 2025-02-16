@@ -2,7 +2,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { EducationSection } from './EducationSection';
-import { School } from '@mui/icons-material';
 
 describe('EducationSection', () => {
   test('renders the EducationSection component', () => {
