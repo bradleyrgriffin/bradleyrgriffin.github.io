@@ -5,6 +5,9 @@ on:
   push:
     branches:
       - main
+    paths-ignore: # Ignore markdown changes
+      - '**/*.md'
+      - '*.md'
 
 permissions:
   contents: write # Grant write permission for contents
