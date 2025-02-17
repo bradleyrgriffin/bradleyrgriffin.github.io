@@ -39,9 +39,30 @@ const Projects: React.FC = () => {
       />
       <Box my={4} id="projects">
         <Typography variant="h4" component="h1" gutterBottom>
-          Projects
+          Featured Projects
         </Typography>
         <Grid2 container spacing={4} pb={4}>
+          <Grid2 size={{ xs: 12, sm: 6, md: 4 }} >
+            <Card sx={{
+            backgroundColor: 'secondary.contrastText'
+          }}>
+              <CardContent>
+                <Typography variant="h5" component="div" gutterBottom>
+                  This Website
+                </Typography>
+                <Typography variant="subtitle1">
+                  This is built using nextjs, and served as a static site via Github Pages. Showcases all standard good practices, such as formatting, linting, unit tests, cypress e2e tests, and ci/cd to trigger everything.
+                </Typography>
+                <Button
+                  size="small"
+                  color="primary"
+                  href="https://github.com/bradleyrgriffin/bradleyrgriffin.github.io"
+                >
+                  View on Github
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid2>
           <Grid2 size={{ xs: 12, sm: 6, md: 4 }}>
             <Card>
               <CardContent>
@@ -49,11 +70,12 @@ const Projects: React.FC = () => {
                   Genetic Algorithm
                 </Typography>
                 <Typography variant="subtitle1">
-                  This is a in-browser application, clicking Open below will
+                  This is an in-browser application, clicking Open below will
                   launch it. It showcases how to use a genetic algorithm to
                   solve the knapsack problem.
                 </Typography>
                 <Button
+                disabled
                   size="small"
                   color="primary"
                   href="projects/geneticAlgorithm.html"
@@ -63,6 +85,7 @@ const Projects: React.FC = () => {
               </CardContent>
             </Card>
           </Grid2>
+          
         </Grid2>
         <Typography variant="h4" component="h1" gutterBottom>
           Github Projects
@@ -70,7 +93,7 @@ const Projects: React.FC = () => {
         <Grid2 container spacing={4}>
           {repositories?.map((repo) => (
             <Grid2 key={repo.id} size={{ xs: 12, sm: 6, md: 4 }}>
-              <Card>
+              <Card sx={{backgroundColor: 'secondary.main'}}>
                 <CardContent>
                   <Typography variant="h5" component="div">
                     {repo.name}

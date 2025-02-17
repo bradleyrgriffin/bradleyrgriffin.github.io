@@ -42,6 +42,8 @@ To use this project, follow these steps:
 2. Run `npm run deploy` to compile and deploy the project.
 3. Deploy the site to GitHub Pages using the `gh-pages` branch. (Automatically occurs after merging to main) - where we run the predeploy step. (See .github/workflows/deploy.yml)
 
+![example of cicd workflows](docs/workflow_example.png)
+
 ## Formatting
 We use prettier to format here:
 ```sh
