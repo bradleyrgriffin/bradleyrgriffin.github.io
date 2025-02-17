@@ -37,7 +37,7 @@ const Projects: React.FC = () => {
           url: 'https://bradleyrgriffin.me/projects',
         }}
       />
-      <Box my={4}>
+      <Box my={4} id="projects">
         <Typography variant="h4" component="h1" gutterBottom>
           Projects
         </Typography>

@@ -6,7 +6,7 @@ import { School } from '@mui/icons-material';
 
 export const EducationSection: React.FC = () => {
   return (
-    <Box sx={{ p: 4, mt: 4 }}>
+    <Box sx={{ p: 4, mt: 4 }} id="education-section">
       <Grid2 container spacing={4} alignItems="center">
         <Grid2
           container

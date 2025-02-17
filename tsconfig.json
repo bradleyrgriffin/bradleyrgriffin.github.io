@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["jest", "node", "@testing-library/react"],
+    "types": ["jest", "node", "@testing-library/react", "@types/cypress"],
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -28,7 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "babel.config.js"
+    "babel-jest.config.js"
   ],
   "exclude": ["node_modules"]
 }

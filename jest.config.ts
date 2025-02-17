@@ -3,9 +3,13 @@ export default {
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
   transform: {
-    '^.+\\.(ts|tsx)$': 'babel-jest',
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      { configFile: './babel-jest.config.js' },
+    ],
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   globals: {

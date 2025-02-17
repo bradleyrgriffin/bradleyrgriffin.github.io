@@ -127,6 +127,7 @@ const skills = [
 export const ExperienceSkillsSection: React.FC = () => {
   return (
     <Grid2
+    id="skills-section"
       container
       justifyContent="center"
       alignItems="center"
