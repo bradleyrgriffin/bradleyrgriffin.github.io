@@ -1,6 +1,10 @@
 // cypress/e2e/landing_page_spec.ts
 
 describe('Landing Page', () => {
+  before(() => {
+    cy.wait(60000); // Wait for 1 minute (60000 milliseconds)
+  });
+
   beforeEach(() => {
     cy.visit('/');
   });
