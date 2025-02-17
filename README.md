@@ -44,6 +44,12 @@ To use this project, follow these steps:
 
 ![example of cicd workflows](docs/workflow_example.png)
 
+
+## Security Scanning
+We're using Dependabot for BOM scanning and CodeQL for SAST scanning; example of the screen/enablement from this project:
+![example of codeql and dependabot](docs/codeql_dependabot_example.png)
+
+
 ## Formatting
 We use prettier to format here:
 ```sh
