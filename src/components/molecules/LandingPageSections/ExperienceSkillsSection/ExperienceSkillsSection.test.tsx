@@ -31,10 +31,10 @@ describe('ExperienceSkillsSection', () => {
       'OAuth2 & OIDC',
       'Modernization Projects',
       'Technical Leadership',
-      'Mentoring'
+      'Mentoring',
     ];
 
-    skills.forEach(skill => {
+    skills.forEach((skill) => {
       expect(screen.getByText(skill)).toBeInTheDocument();
     });
   });

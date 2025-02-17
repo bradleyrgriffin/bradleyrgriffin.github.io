@@ -16,6 +16,8 @@ describe('EducationSection', () => {
 
     // Check for the list items
     expect(screen.getByText(', Thomas College')).toBeInTheDocument();
-    expect(screen.getByText(', Kennebec Valley Community College')).toBeInTheDocument();
+    expect(
+      screen.getByText(', Kennebec Valley Community College')
+    ).toBeInTheDocument();
   });
 });

@@ -29,7 +29,9 @@ describe('fetchRepositories', () => {
     ) as jest.Mock;
 
     const username = 'testuser';
-    
-    await expect(fetchRepositories(username)).rejects.toThrow('Failed to fetch');
+
+    await expect(fetchRepositories(username)).rejects.toThrow(
+      'Failed to fetch'
+    );
   });
 });
