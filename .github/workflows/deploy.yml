@@ -83,11 +83,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '23.8.0'
-      - name: Wait for application to be available
-        run: npx wait-on https://bradleyrgriffin.me
 
       - name: Install dependencies
         run: npm install
-        
+
       - name: Run Cypress tests
         run: npm run 
