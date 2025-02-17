@@ -8,7 +8,7 @@ import { Work } from '@mui/icons-material';
 export const AboutSection: React.FC = () => {
   return (
     <Paper
-    id="about-section"
+      id="about-section"
       sx={{ p: 4, mt: 4, borderRadius: 2, backgroundColor: 'secondary.main' }}
     >
       <Grid2 container spacing={4} alignItems="center">

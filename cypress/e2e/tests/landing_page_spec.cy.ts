@@ -17,19 +17,27 @@ describe('Landing Page', () => {
     cy.scrollTo('bottom');
     cy.get('footer').should('exist');
 
-    cy.get('footer a[href="https://www.facebook.com/brad.griffin.3975"]').should('exist');
-    cy.get('footer a[href="https://www.linkedin.com/in/bradleyrgriffin/"]').should('exist');
-    cy.get('footer a[href^="mailto:contact@bradleyrgriffin.me"]').should('exist');
+    cy.get(
+      'footer a[href="https://www.facebook.com/brad.griffin.3975"]'
+    ).should('exist');
+    cy.get(
+      'footer a[href="https://www.linkedin.com/in/bradleyrgriffin/"]'
+    ).should('exist');
+    cy.get('footer a[href^="mailto:contact@bradleyrgriffin.me"]').should(
+      'exist'
+    );
   });
 
   it('should validate the header and menu items', () => {
     cy.get('.MuiToolbar-root').should('exist');
-    cy.get('.MuiToolbar-root .MuiBox-root').eq(1).within(() => {
-      cy.contains('Home').should('exist');
-      cy.contains('LinkedIn').should('exist');
-      cy.contains('Projects').should('exist');
-      cy.contains('Contact').should('exist');
-    });
+    cy.get('.MuiToolbar-root .MuiBox-root')
+      .eq(1)
+      .within(() => {
+        cy.contains('Home').should('exist');
+        cy.contains('LinkedIn').should('exist');
+        cy.contains('Projects').should('exist');
+        cy.contains('Contact').should('exist');
+      });
 
     cy.get('.MuiToolbar-root .MuiBox-root a').should('have.length', 4);
     cy.get('.MuiToolbar-root .MuiBox-root a:contains("Contact")').should(
