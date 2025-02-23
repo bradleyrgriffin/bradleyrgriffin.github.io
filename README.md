@@ -1,41 +1,50 @@
 # Modern Web Development Website
 
 ## Overview
+
 Welcome to the Modern Web Development Website! This project was created to build a website using modern web development techniques and host it on GitHub Pages. The aim is to leverage the latest web technologies to create a dynamic and responsive site.
 
 ## Features
+
 - **Responsive Design:** Optimized for various screen sizes and devices.
 - **Modern JavaScript:** Utilizing ES6+ features for clean and efficient code.
 - **CSS Flexbox/Grid:** Layouts that are flexible and easy to maintain.
 - **SASS:** Enhanced styling with modular CSS and variables.
 - **Webpack/Babel:** Efficient bundling and transpiling of code.
 - **GitHub Pages:** Seamless deployment and hosting.
+- **Oauth2/OIDC Authentication:** Uses Google Oauth2/OIDC login funcitonality - as an example.
 
 ## Prerequisites
+
 Before you begin, ensure you have met the following requirements:
+
 - Node.js and npm installed
 - Basic understanding of HTML, CSS, and JavaScript
 - A GitHub account for hosting
 
 ## Installation
+
 To install and run this project locally, follow these steps:
 
 1. Clone the repository:
-    ```sh
-    git clone https://github.com/bradleyrgriffin/bradleyrgriffin.github.io.git
-    ```
+
+   ```sh
+   git clone https://github.com/bradleyrgriffin/bradleyrgriffin.github.io.git
+   ```
 
 2. Install dependencies:
-    ```sh
-    npm install
-    ```
+
+   ```sh
+   npm install
+   ```
 
 3. Run the project:
-    ```sh
-    npm run dev
-    ```
+   ```sh
+   npm run dev
+   ```
 
 ## Usage
+
 To use this project, follow these steps:
 
 1. Customize the content in the `src` directory.
@@ -44,25 +53,29 @@ To use this project, follow these steps:
 
 ![example of cicd workflows](docs/workflow_example.png)
 
-
 ## Security Scanning
+
 We're using Dependabot for BOM scanning and CodeQL for SAST scanning; example of the screen/enablement from this project:
 ![example of codeql and dependabot](docs/codeql_dependabot_example.png)
 
-
 ## Formatting
+
 We use prettier to format here:
+
 ```sh
 npm run format
 ```
 
 ## Linting
+
 We use ESLint to format:
+
 ```sh
 npm run lint
 ```
 
 ## Running Tests
+
 To run tests, use the following command:
 
 ```sh
@@ -70,12 +83,15 @@ npm run test:coverage
 ```
 
 ### Cypress
+
 CI-based:
+
 ```sh
 npm run cypress:run
 ```
 
 UX-based:
+
 ```sh
 npm run cypress:open
 ```

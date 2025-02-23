@@ -42,16 +42,21 @@ const Projects: React.FC = () => {
           Featured Projects
         </Typography>
         <Grid2 container spacing={4} pb={4}>
-          <Grid2 size={{ xs: 12, sm: 6, md: 4 }} >
-            <Card sx={{
-            backgroundColor: 'secondary.contrastText'
-          }}>
+          <Grid2 size={{ xs: 12, sm: 6, md: 4 }}>
+            <Card
+              sx={{
+                backgroundColor: 'secondary.contrastText',
+              }}
+            >
               <CardContent>
                 <Typography variant="h5" component="div" gutterBottom>
                   This Website
                 </Typography>
                 <Typography variant="subtitle1">
-                  This is built using nextjs, and served as a static site via Github Pages. Showcases all standard good practices, such as formatting, linting, unit tests, cypress e2e tests, and ci/cd to trigger everything.
+                  This is built using nextjs, and served as a static site via
+                  Github Pages. Showcases all standard good practices, such as
+                  formatting, linting, unit tests, cypress e2e tests, and ci/cd
+                  to trigger everything.
                 </Typography>
                 <Button
                   size="small"
@@ -75,7 +80,7 @@ const Projects: React.FC = () => {
                   solve the knapsack problem.
                 </Typography>
                 <Button
-                disabled
+                  disabled
                   size="small"
                   color="primary"
                   href="projects/geneticAlgorithm.html"
@@ -85,7 +90,6 @@ const Projects: React.FC = () => {
               </CardContent>
             </Card>
           </Grid2>
-          
         </Grid2>
         <Typography variant="h4" component="h1" gutterBottom>
           Github Projects
@@ -93,7 +97,7 @@ const Projects: React.FC = () => {
         <Grid2 container spacing={4}>
           {repositories?.map((repo) => (
             <Grid2 key={repo.id} size={{ xs: 12, sm: 6, md: 4 }}>
-              <Card sx={{backgroundColor: 'secondary.main'}}>
+              <Card sx={{ backgroundColor: 'secondary.main' }}>
                 <CardContent>
                   <Typography variant="h5" component="div">
                     {repo.name}

@@ -13,7 +13,8 @@ import { Header } from '../components/molecules/Header';
 import { Footer } from '../components/molecules/Footer';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../seo.config';
-
+import { UserProvider } from '../components/providers/UserProvider';
+import { Drawer } from '../components/molecules/UserPopupDrawer';
 // Client-side cache shared for the whole session
 // of the user in the browser.
 
@@ -39,12 +40,15 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <title>Brad Griffin, Professional</title>
       </Head>
       <ThemeProvider theme={theme}>
-        <Header />
+        <UserProvider>
+          <Header />
 
-        <CssBaseline />
-        <DefaultSeo {...SEO} />
-        <Component {...pageProps} />
-        <Footer />
+          <CssBaseline />
+          <DefaultSeo {...SEO} />
+          <Component {...pageProps} />
+          <Footer />
+          <Drawer />
+        </UserProvider>
       </ThemeProvider>
     </CacheProvider>
   );

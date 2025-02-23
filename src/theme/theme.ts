@@ -11,7 +11,7 @@ export const theme = createTheme({
     },
     secondary: {
       main: '#f0f0f0',
-      contrastText: '#ffa500'
+      contrastText: '#ffa500',
     },
     error: {
       main: red.A400,

@@ -16,11 +16,14 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Link from 'next/link';
 import { email, linkedIn } from '@/components/constants/contactInformation';
-
+import { GoogleSignInButton } from '../../atoms/GoogleSignInButton';
+import { useUser, useClearUser } from '@/components/providers/UserProvider';
 export const Header: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const user = useUser();
+  const clearUser = useClearUser();
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -69,6 +72,19 @@ export const Header: React.FC = () => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
+              {user?.decoded?.name ? `Hello ${user?.decoded?.given_name}!` : <MenuItem
+                  key="googleSignIn"
+                  component={GoogleSignInButton}
+                />}
+                {user?.decoded?.name && <MenuItem
+                  key="logout-button"
+                  onClick={() => { clearUser(); handleClose();}}
+                  component={Button}
+                  variant="text"
+                >
+                  Logout
+                </MenuItem>
+              }
               {menuItems.map((item) => (
                 <MenuItem
                   key={item.text}
@@ -82,7 +98,17 @@ export const Header: React.FC = () => {
             </Menu>
           </div>
         ) : (
-          <Box sx={{ display: 'flex' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            
+            {user?.decoded?.name ? `Hello ${user?.decoded?.given_name}!` : <GoogleSignInButton />}
+            {user?.decoded?.name && <Button
+                key="logout-button"
+                color="inherit"
+                component={Button}
+                onClick={clearUser}
+              >
+                Logout
+              </Button>}
             {menuItems.map((item) => (
               <Button
                 key={item.text}
