@@ -9,7 +9,6 @@ import {
 import { jwtDecode } from 'jwt-decode';
 import { useSetUser } from '../../providers/UserProvider';
 import { GOOGLE_CLIENT_ID } from '../../constants/auth';
-import { Grid2 } from '@mui/material';
 
 export const GoogleSignInButton = () => {
   const setUser = useSetUser();

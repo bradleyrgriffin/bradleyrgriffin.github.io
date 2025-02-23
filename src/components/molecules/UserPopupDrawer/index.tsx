@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useUser, useClearUser } from '../../providers/UserProvider';
 import './Drawer.css';
+import { Button } from '@mui/material';
 
 export const Drawer = () => {
   const user = useUser();
@@ -39,9 +40,9 @@ export const Drawer = () => {
         <p>Name: {user.decoded?.name}</p>
         <p>Email: {user.decoded?.email}</p>
         <p>Thank you for testing out the OAuth2/OIDC functionality.</p>
-        <button className="logout-button" onClick={handleLogout}>
+        <Button color="error" className="logout-button" onClick={handleLogout}>
           Logout
-        </button>
+        </Button>
       </div>
     </div>
   );

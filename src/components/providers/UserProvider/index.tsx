@@ -1,12 +1,6 @@
 // userContext.tsx
 
-import React, {
-  createContext,
-  useReducer,
-  useContext,
-  ReactNode,
-  Dispatch,
-} from 'react';
+import React, { createContext, useReducer, useContext, ReactNode } from 'react';
 
 interface UserState {
   jwt: string | null;
