@@ -7,10 +7,8 @@ const nextConfig: NextConfig = {
   output: 'export',
   assetPrefix: isProd ? '' : '',
   basePath: isProd ? '' : '',
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
+  images: { unoptimized: true },
+  exportPathMap: async function (defaultPathMap) {
     return {
       ...defaultPathMap,
       '/': { page: '/' },

@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { useUser, useClearUser } from '../../providers/UserProvider';
-import './Drawer.css';
+import styles from './Drawer.module.css';
 import { Button } from '@mui/material';
+import Image from 'next/image';
 
 export const Drawer = () => {
   const user = useUser();
@@ -28,19 +29,24 @@ export const Drawer = () => {
   if (!visible) return null;
 
   return (
-    <div className="drawer">
-      <div className="drawer-content">
-        <button className="drawer-close" onClick={handleClose}>
+    <div className={styles.drawer}>
+      <div className={styles.drawerContent}>
+        <button className={styles.drawerClose} onClick={handleClose}>
           X
         </button>
-        <div className="avatar">
-          <img src={user.decoded?.picture} alt="User Avatar" />
+        <div className={styles.avatar}>
+          <Image
+            src={user.decoded?.picture}
+            alt="User Avatar"
+            width={50}
+            height={50}
+          />
         </div>
         <h3>Thank you for logging in!</h3>
         <p>Name: {user.decoded?.name}</p>
         <p>Email: {user.decoded?.email}</p>
         <p>Thank you for testing out the OAuth2/OIDC functionality.</p>
-        <Button color="error" className="logout-button" onClick={handleLogout}>
+        <Button color="error" onClick={handleLogout}>
           Logout
         </Button>
       </div>

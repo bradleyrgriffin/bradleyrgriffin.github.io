@@ -1,4 +1,4 @@
-/* Drawer.css */
+/* Drawer.module.css */
 
 .drawer {
   position: fixed;
@@ -12,11 +12,12 @@
   z-index: 1000;
 }
 
-.drawer-content {
+.drawerContent {
   position: relative;
+  text-align: center;
 }
 
-.drawer-close {
+.drawerClose {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -34,12 +35,10 @@
 
 .avatar img {
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
   object-fit: cover;
 }
 
-.logout-button {
+.logoutButton {
   margin-top: 16px;
   background-color: #f44336;
   color: white;
@@ -49,6 +48,6 @@
   cursor: pointer;
 }
 
-.logout-button:hover {
+.logoutButton:hover {
   background-color: #d32f2f;
 }
