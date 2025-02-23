@@ -72,19 +72,24 @@ export const Header: React.FC = () => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              {user?.decoded?.name ? `Hello ${user?.decoded?.given_name}!` : <MenuItem
-                  key="googleSignIn"
-                  component={GoogleSignInButton}
-                />}
-                {user?.decoded?.name && <MenuItem
+              {user?.decoded?.name ? (
+                `Hello ${user?.decoded?.given_name}!`
+              ) : (
+                <MenuItem key="googleSignIn" component={GoogleSignInButton} />
+              )}
+              {user?.decoded?.name && (
+                <MenuItem
                   key="logout-button"
-                  onClick={() => { clearUser(); handleClose();}}
+                  onClick={() => {
+                    clearUser();
+                    handleClose();
+                  }}
                   component={Button}
                   variant="text"
                 >
                   Logout
                 </MenuItem>
-              }
+              )}
               {menuItems.map((item) => (
                 <MenuItem
                   key={item.text}
@@ -99,16 +104,21 @@ export const Header: React.FC = () => {
           </div>
         ) : (
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            
-            {user?.decoded?.name ? `Hello ${user?.decoded?.given_name}!` : <GoogleSignInButton />}
-            {user?.decoded?.name && <Button
+            {user?.decoded?.name ? (
+              `Hello ${user?.decoded?.given_name}!`
+            ) : (
+              <GoogleSignInButton />
+            )}
+            {user?.decoded?.name && (
+              <Button
                 key="logout-button"
                 color="inherit"
                 component={Button}
                 onClick={clearUser}
               >
                 Logout
-              </Button>}
+              </Button>
+            )}
             {menuItems.map((item) => (
               <Button
                 key={item.text}

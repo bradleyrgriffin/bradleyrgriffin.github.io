@@ -9,7 +9,7 @@ test('test header', () => {
   render(
     <ThemeProvider theme={theme}>
       <UserProvider>
-      <Header />
+        <Header />
       </UserProvider>
     </ThemeProvider>
   );
