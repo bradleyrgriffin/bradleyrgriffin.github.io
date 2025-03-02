@@ -7,7 +7,12 @@ const nextConfig: NextConfig = {
   output: 'export',
   assetPrefix: isProd ? '' : '',
   basePath: isProd ? '' : '',
-  images: { unoptimized: true },
+  images: { unoptimized: true,
+    remotePatterns: [{
+      protocol: 'https',
+      hostname: '**',
+    }]
+   },
   exportPathMap: async function (defaultPathMap) {
     return {
       ...defaultPathMap,

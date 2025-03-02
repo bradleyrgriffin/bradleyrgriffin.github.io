@@ -12,7 +12,7 @@ import {
 
 export const Footer: React.FC = () => {
   return (
-    <Box component="footer" sx={{ backgroundColor: '#f5f5f5', py: 4, mt: 8 }}>
+    <Box component="footer" sx={{ backgroundColor: 'secondary.main', py: 4, mt: 8 }}>
       <Container maxWidth="lg">
         <Box
           display="flex"
