@@ -1,4 +1,4 @@
 export type DarkModeToggleProps = {
-    darkMode?: boolean;
-    toggleDarkMode: () => void;
+  darkMode?: boolean;
+  toggleDarkMode: () => void;
 };

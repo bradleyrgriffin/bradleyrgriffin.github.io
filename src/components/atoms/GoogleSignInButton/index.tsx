@@ -22,11 +22,11 @@ export const GoogleSignInButton = () => {
         decoded,
         clientId: response.clientId || null,
       });
-      if(window.gtag){
-        window.gtag("event", "login", {
-          method: "Google",
+      if (window.gtag) {
+        window.gtag('event', 'login', {
+          method: 'Google',
           user_id: decoded.sub,
-           name: (decoded as any).name
+          name: (decoded as any).name,
         });
       }
       console.log('Login Success:', decoded);

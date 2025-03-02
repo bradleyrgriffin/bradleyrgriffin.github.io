@@ -17,14 +17,13 @@ import { UserProvider } from '../components/providers/UserProvider';
 import { Drawer } from '../components/molecules/UserPopupDrawer';
 import { useEffect, useState } from 'react';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import {googleAnalyticsConfig} from '../components/constants/googleAnalytics';
+import { googleAnalyticsConfig } from '../components/constants/googleAnalytics';
 // Client-side cache shared for the whole session
 // of the user in the browser.
 
 const clientSideEmotionCache = createEmotionCache();
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-
   const [darkMode, setDarkMode] = useState(false);
   React.useEffect(() => {
     // Remove the server-side injected CSS.
@@ -34,7 +33,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     }
   }, []);
 
-    useEffect(() => {
+  useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       setDarkMode(true);
@@ -64,12 +63,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider theme={darkMode ? darkModeTheme : theme}>
         <UserProvider>
-          <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+          <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
           <CssBaseline />
           <DefaultSeo {...SEO} />
           <GoogleAnalytics gaId={googleAnalyticsConfig.tagId} />
-          <Component {...pageProps}  toggleDarkMode={toggleDarkMode}/>
+          <Component {...pageProps} toggleDarkMode={toggleDarkMode} />
           <Footer />
           <Drawer />
         </UserProvider>

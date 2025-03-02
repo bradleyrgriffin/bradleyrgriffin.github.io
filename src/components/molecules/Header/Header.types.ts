@@ -1,4 +1,4 @@
 export type HeaderProps = {
-    darkMode?: boolean;
-    toggleDarkMode: () => void;
+  darkMode?: boolean;
+  toggleDarkMode: () => void;
 };

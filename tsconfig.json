@@ -1,6 +1,12 @@
 {
   "compilerOptions": {
-    "types": ["jest", "node", "@testing-library/react", "@testing-library/jest-dom", "@types/cypress"],
+    "types": [
+      "jest",
+      "node",
+      "@testing-library/react",
+      "@testing-library/jest-dom",
+      "@types/cypress"
+    ],
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

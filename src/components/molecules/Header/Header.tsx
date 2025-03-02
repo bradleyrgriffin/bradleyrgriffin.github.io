@@ -18,9 +18,9 @@ import Link from 'next/link';
 import { email, linkedIn } from '@/components/constants/contactInformation';
 import { GoogleSignInButton } from '../../atoms/GoogleSignInButton';
 import { useUser, useClearUser } from '@/components/providers/UserProvider';
-import { DarkModeToggle} from '../../atoms/DarkModeToggle';
-import {HeaderProps} from './Header.types';
-export const Header: any = ({ darkMode, toggleDarkMode}: HeaderProps) => {
+import { DarkModeToggle } from '../../atoms/DarkModeToggle';
+import { HeaderProps } from './Header.types';
+export const Header: any = ({ darkMode, toggleDarkMode }: HeaderProps) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));

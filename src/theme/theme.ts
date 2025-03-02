@@ -20,11 +20,10 @@ export const theme = createTheme({
   },
 });
 
-
 export const darkModeTheme = createTheme({
-    palette: {
-      mode: 'dark',
-      primary: {
+  palette: {
+    mode: 'dark',
+    primary: {
       main: '#90caf9', // A softer blue for better contrast on dark backgrounds
     },
     secondary: {
@@ -42,5 +41,5 @@ export const darkModeTheme = createTheme({
       primary: '#ffffff', // Ensures good readability
       secondary: '#b0bec5', // Slightly muted text for contrast
     },
-    },
-  });
+  },
+});
