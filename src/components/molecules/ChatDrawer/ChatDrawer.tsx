@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import styled from 'styled-components';
-import { prompt} from '../../constants/aiChatPrompt';
+import { prompt } from '../../constants/aiChatPrompt';
 const FloatingCardWrapper = styled.div`
   position: absolute;
   top: 6rem;
@@ -56,7 +56,19 @@ const ChatDrawer = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ contents: [{ parts: [{ text: prompt}, chat.map(({text}) => ({ text: `The following was a historical message, please reference it for context for the final message. ${message}`})),{ text: message }] }] }),
+          body: JSON.stringify({
+            contents: [
+              {
+                parts: [
+                  { text: prompt },
+                  chat.map(({ text }) => ({
+                    text: `The following was a historical message, please reference it for context for the final message. ${text}`,
+                  })),
+                  { text: message },
+                ],
+              },
+            ],
+          }),
         }
       );
       const data = await res.json();
@@ -90,7 +102,7 @@ const ChatDrawer = () => {
             Gemini. It requires manual API token creation - due to inability to
             use user login credentials to authenticate. Please note, this uses
             _your_ api token access, so any increases in usage beyond free-tier
-            quotas will be chargeable dependent on Google's terms of use.
+            quotas will be chargeable dependent on Google&apos;s terms of use.
           </Typography>
 
           {!apiKey && (
