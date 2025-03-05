@@ -24,7 +24,7 @@ import { googleAnalyticsConfig } from '../components/constants/googleAnalytics';
 const clientSideEmotionCache = createEmotionCache();
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   React.useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
