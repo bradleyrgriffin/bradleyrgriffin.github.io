@@ -20,6 +20,8 @@ import { GoogleSignInButton } from '../../atoms/GoogleSignInButton';
 import { useUser, useClearUser } from '@/components/providers/UserProvider';
 import { DarkModeToggle } from '../../atoms/DarkModeToggle';
 import { HeaderProps } from './Header.types';
+import ChatDrawer from '@/components/molecules/ChatDrawer/ChatDrawer';
+
 export const Header: any = ({ darkMode, toggleDarkMode }: HeaderProps) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const theme = useTheme();
@@ -49,6 +51,7 @@ export const Header: any = ({ darkMode, toggleDarkMode }: HeaderProps) => {
           Brad Griffin
         </Typography>
         <Box sx={{ flexGrow: 1 }}></Box>
+        <ChatDrawer />
         <DarkModeToggle toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
         {isMobile ? (
           <div>

@@ -9,31 +9,13 @@ import {
   Alert,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import styled from 'styled-components';
 import { prompt } from '../../constants/aiChatPrompt';
-const FloatingCardWrapper = styled.div`
-  position: absolute;
-  top: 6rem;
-  left: 0;
-  padding: 20px;
-  margin-left: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-`;
+import AutoAwesome from '@mui/icons-material/AutoAwesome'; // You can replace this with any icon you prefer
+import Tooltip from '@mui/material/Tooltip';
+
 
 const FloatingCard: any = ({ setOpen, open }: any) => {
-  if (open) {
-    return <></>;
-  }
-  return (
-    <FloatingCardWrapper>
-      <Button
-        variant="contained"
-        style={{ width: '100%' }}
-        onClick={() => setOpen(true)}
-      >
-        Open Google Gemini Chat
-      </Button>
-    </FloatingCardWrapper>
+  return (<Tooltip title="Open Google Gemini Chat"><IconButton disabled={open} onClick={() => setOpen(true)} color="inherit"><AutoAwesome /></IconButton></Tooltip>
   );
 };
 
@@ -92,7 +74,10 @@ const ChatDrawer = () => {
     <>
       <FloatingCard setOpen={setOpen} open={open} />
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-        <Box sx={{ width: 500, p: 2 }}>
+        <Box sx={{p: 2, width: {
+          md: 500,
+          sm: '100%'
+        }}}>
           <IconButton onClick={() => setOpen(false)} sx={{ float: 'right' }}>
             <CloseIcon />
           </IconButton>
