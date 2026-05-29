@@ -72,7 +72,7 @@ export const Footer: React.FC = () => {
             <Typography variant="body2" color="textSecondary">
               Contact: {email}
             </Typography>
-            <Link href="/#bug-report-section" legacyBehavior>
+            <Link href="/bug-report" legacyBehavior>
               <Button component="a" variant="contained" color="primary" size="small">
                 Report a Bug
               </Button>
