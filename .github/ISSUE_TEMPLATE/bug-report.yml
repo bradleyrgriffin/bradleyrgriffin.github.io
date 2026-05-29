@@ -1,0 +1,57 @@
+name: Bug report
+description: Report bugs or unexpected behavior found on the website.
+title: "[Bug]"
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide as much detail as possible. After clicking the bug report button on the site, confirm the details and attach any screenshots before submitting.
+  - type: input
+    id: summary
+    attributes:
+      label: Short summary
+      description: Enter a brief title for the bug.
+      placeholder: Example: Contact form fails to submit
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Choose the severity level.
+      options:
+        - label: Critical
+          value: Critical
+        - label: High
+          value: High
+        - label: Medium
+          value: Medium
+        - label: Low
+          value: Low
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: List the exact steps needed to reproduce the issue.
+      placeholder: |-
+        1. Open ...
+        2. Click ...
+        3. Observe ...
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened?
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs
+      description: Copy any relevant error messages or console output.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Add screenshots or environment details here if needed.
