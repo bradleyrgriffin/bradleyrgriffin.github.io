@@ -1,6 +1,6 @@
 // components/Footer.tsx
 import * as React from 'react';
-import { Box, Typography, IconButton, Container } from '@mui/material';
+import { Box, Typography, IconButton, Container, Button } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
@@ -9,6 +9,8 @@ import {
   facebook,
   linkedIn,
 } from '@/components/constants/contactInformation';
+
+import Link from 'next/link';
 
 export const Footer: React.FC = () => {
   return (
@@ -66,10 +68,15 @@ export const Footer: React.FC = () => {
               </a>
             </Typography>
           </Box>
-          <Box>
+          <Box display="flex" alignItems="center" gap={2}>
             <Typography variant="body2" color="textSecondary">
               Contact: {email}
             </Typography>
+            <Link href="/#bug-report-section" legacyBehavior>
+              <Button component="a" variant="contained" color="primary" size="small">
+                Report a Bug
+              </Button>
+            </Link>
           </Box>
         </Box>
       </Container>
