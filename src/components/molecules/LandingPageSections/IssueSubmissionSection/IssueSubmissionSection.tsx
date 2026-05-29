@@ -67,7 +67,7 @@ export const IssueSubmissionSection: React.FC = () => {
       </Typography>
       <Box component="form" onSubmit={handleSubmit} noValidate>
         <Grid2 container spacing={3}>
-          <Grid2 xs={12}>
+          <Grid2 size={12}>
             <TextField
               label="Describe the Bug"
               multiline
@@ -79,7 +79,7 @@ export const IssueSubmissionSection: React.FC = () => {
             />
           </Grid2>
 
-          <Grid2 xs={12} sm={6}>
+          <Grid2 size={{ xs: 12, sm: 6 }}>
             <TextField
               select
               label="Severity"
@@ -95,7 +95,7 @@ export const IssueSubmissionSection: React.FC = () => {
             </TextField>
           </Grid2>
 
-          <Grid2 xs={12} sm={6}>
+          <Grid2 size={{ xs: 12, sm: 6 }}>
             <TextField
               label="Relevant Logs"
               multiline
@@ -106,7 +106,7 @@ export const IssueSubmissionSection: React.FC = () => {
             />
           </Grid2>
 
-          <Grid2 xs={12}>
+          <Grid2 size={12}>
             <TextField
               label="Steps to Reproduce"
               multiline
@@ -118,7 +118,7 @@ export const IssueSubmissionSection: React.FC = () => {
             />
           </Grid2>
 
-          <Grid2 xs={12}>
+          <Grid2 size={12}>
             <TextField
               label="Expected Behavior"
               multiline
@@ -129,7 +129,7 @@ export const IssueSubmissionSection: React.FC = () => {
             />
           </Grid2>
 
-          <Grid2 xs={12}>
+          <Grid2 size={12}>
             <Box display="flex" flexDirection="column" gap={1}>
               <Typography variant="body2">Screenshots</Typography>
               <input
@@ -147,12 +147,12 @@ export const IssueSubmissionSection: React.FC = () => {
           </Grid2>
 
           {error ? (
-            <Grid2 xs={12}>
+            <Grid2 size={12}>
               <Alert severity="error">{error}</Alert>
             </Grid2>
           ) : null}
 
-          <Grid2 xs={12}>
+          <Grid2 size={12}>
             <Button type="submit" variant="contained" color="primary">
               Submit Bug Report
             </Button>
